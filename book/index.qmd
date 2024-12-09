@@ -18,7 +18,7 @@ All practical exercises will be conducted using the [public Opal demo server](ht
 Login credentials for the demo server are:
 
 - Username: `dsuser`
-- Password: `p@ssw0rd`
+- Password: `P@ssw0rd`
 
 ## Schedule
 

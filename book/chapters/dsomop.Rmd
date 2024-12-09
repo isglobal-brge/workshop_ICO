@@ -18,8 +18,8 @@ library(dsOMOPHelper)
 builder <- newDSLoginBuilder()
 builder$append(server="opal-demo",
               url="https://opal-demo.obiba.org/",
-              user="administrator",
-              password="password",
+              user="dsuser",
+              password="P@ssw0rd",
               driver = "OpalDriver",
               profile = "omop")
 
