@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DataSHIELD Workshop",
+    "section": "",
+    "text": "Introduction\nThis website hosts the materials and exercises for the DataSHIELD workshop at the Institut Català d’Oncologia (ICO).\nOn it you will find reading materials, setup tutorials, workshop indications and practical exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "DataSHIELD Workshop",
+    "section": "Getting Started",
+    "text": "Getting Started\nAll practical exercises will be conducted using the public Opal demo server. This server provides a fully functional DataSHIELD environment with sample datasets that workshop participants can use to replicate the examples.\nLogin credentials for the demo server are:\n\nUsername: dsuser\nPassword: p@ssw0rd",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "DataSHIELD Workshop",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nTopic\n\n\n\n\n09:00\nWelcome\n\n\n09:15\nDataSHIELD: Introduction and Infrastructure\n\n\n10:00\nQ&A\n\n\n12:30\nEnd",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#credits",
+    "href": "index.html#credits",
+    "title": "DataSHIELD Workshop",
+    "section": "Credits",
+    "text": "Credits\nMaterial developed at the Bioinformatics Research Group in Epidemiology (BRGE) of the Barcelona Institute for Global Health (ISGlobal) by Juan R González and David Sarrat González.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+    ]
+  }
+]

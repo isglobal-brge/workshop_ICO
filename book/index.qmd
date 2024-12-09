@@ -1,0 +1,34 @@
+---
+title: "DataSHIELD Workshop"
+author: 
+  - "Juan R González"
+  - "David Sarrat González"
+---
+
+# Introduction
+
+This website hosts the materials and exercises for the DataSHIELD workshop at the Institut Català d'Oncologia (ICO). 
+
+On it you will find reading materials, setup tutorials, workshop indications and practical exercises.
+
+## Getting Started
+
+All practical exercises will be conducted using the [public Opal demo server](https://opal-demo.obiba.org/). This server provides a fully functional DataSHIELD environment with sample datasets that workshop participants can use to replicate the examples.
+
+Login credentials for the demo server are:
+
+- Username: `dsuser`
+- Password: `p@ssw0rd`
+
+## Schedule
+
+| Time   | Topic                                     |
+|--------|-------------------------------------------|
+| 09:00  | Welcome                                   |
+| 09:15  | DataSHIELD: Introduction and Infrastructure|
+| 10:00  | Q&A                                       |
+| 12:30  | End                                       |
+
+## Credits
+
+Material developed at the Bioinformatics Research Group in Epidemiology (BRGE) of the Barcelona Institute for Global Health (ISGlobal) by Juan R González and David Sarrat González.

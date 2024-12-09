@@ -1,0 +1,22 @@
+project:
+  type: book
+  output-dir: ../docs
+
+book:
+  title: "DataSHIELD Workshop"
+  author: 
+    - Juan R. González
+    - David Sarrat González
+  repo-url: https://github.com/isglobal-brge/workshop_ICO
+  repo-actions: [issue]
+  sharing: [twitter, linkedin]
+  favicon: favicon.ico
+  chapters:
+    - index.qmd
+  sidebar:
+    logo: logo.svg
+
+format:
+  html:
+    theme: cosmo
+    number-sections: false
