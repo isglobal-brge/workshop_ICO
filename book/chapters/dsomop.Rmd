@@ -1,0 +1,106 @@
+---
+title: "dsOMOP COPD Example"
+---
+
+# Libraries
+
+```{r libraries, message=FALSE}
+library(DSI)
+library(DSOpal)
+library(dsBaseClient)
+library(dsOMOPClient)
+library(dsOMOPHelper)
+```
+
+# Connection
+
+```{r connection}
+builder <- newDSLoginBuilder()
+builder$append(server="opal-demo",
+              url="https://opal-demo.obiba.org/",
+              user="administrator",
+              password="password",
+              driver = "OpalDriver",
+              profile = "omop")
+
+logindata <- builder$build()
+conns <- datashield.login(logins=logindata)
+```
+
+# Setup
+
+```{r setup}
+o <- ds.omop.helper(
+    connections = conns,
+    resource = "omop_demo.mimiciv", 
+    symbol = "mimiciv"
+)
+```
+
+# Data retrieval
+
+```{r data_retrieval}
+# Define concept IDs
+concepts <- list(
+    outcome = 255573,      # Chronic obstructive lung diease (condition)
+    predictor1 = 4005823,  # Tobacco use (observation)
+    predictor2 = 317009    # Asthma (condition)
+)
+
+# Get data
+o$auto(
+    table = "condition_occurrence", 
+    concepts = c(concepts$outcome, concepts$predictor2),
+    columns = c("condition_occurrence_id")
+)
+
+o$auto(
+    table = "observation", 
+    concepts = concepts$predictor1,
+    columns = c("observation_id")
+)
+
+```
+
+# Data preparation
+
+```{r data_preparation}
+# Convert variables to boolean
+for (var in c("tobacco_user", "asthma", "chronic_obstructive_lung_disease")) {
+    id_type <- if(var == "tobacco_user") "observation_id" else "condition_occurrence_id"
+    full_var <- paste0("mimiciv$", var, ".", id_type)
+    
+    # Convert to numeric
+    ds.asNumeric(x.name = full_var, newobj = paste0(var, "_num"), datasources = conns)
+    
+    # Convert to boolean
+    ds.Boole(V1 = paste0(var, "_num"), V2 = 0, Boolean.operator = "!=", 
+             numeric.output = TRUE, na.assign = 0, newobj = var)
+}
+
+# Create analysis table
+ds.cbind(
+    x = c("chronic_obstructive_lung_disease", "tobacco_user", "asthma"),
+    DataSHIELD.checks = FALSE,
+    newobj = "analysis_table",
+    datasources = conns
+)
+```
+
+# Analysis
+
+```{r analysis}
+model <- ds.glm(
+    formula = "chronic_obstructive_lung_disease ~ tobacco_user + asthma", 
+    data = "analysis_table", 
+    family = "binomial"
+)
+
+print(model)
+```
+
+# Logout
+
+```{r logout}
+datashield.logout(conns)
+```

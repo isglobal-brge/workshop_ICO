@@ -6,7 +6,7 @@
     "section": "",
     "text": "Introduction\nThis website hosts the materials and exercises for the DataSHIELD workshop at the Institut Català d’Oncologia (ICO).\nOn it you will find reading materials, setup tutorials, workshop indications and practical exercises.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "Getting Started",
     "text": "Getting Started\nAll practical exercises will be conducted using the public Opal demo server. This server provides a fully functional DataSHIELD environment with sample datasets that workshop participants can use to replicate the examples.\nLogin credentials for the demo server are:\n\nUsername: dsuser\nPassword: p@ssw0rd",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "Schedule",
     "text": "Schedule\n\n\n\nTime\nTopic\n\n\n\n\n09:00\nWelcome\n\n\n09:15\nDataSHIELD: Introduction and Infrastructure\n\n\n10:00\nQ&A\n\n\n12:30\nEnd",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
@@ -36,7 +36,17 @@
     "section": "Credits",
     "text": "Credits\nMaterial developed at the Bioinformatics Research Group in Epidemiology (BRGE) of the Barcelona Institute for Global Health (ISGlobal) by Juan R González and David Sarrat González.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/dsomop.html",
+    "href": "chapters/dsomop.html",
+    "title": "dsOMOP COPD Example",
+    "section": "",
+    "text": "Libraries\n\nlibrary(DSI)\nlibrary(DSOpal)\nlibrary(dsBaseClient)\nlibrary(dsOMOPClient)\nlibrary(dsOMOPHelper)\n\n\n\nConnection\n\nbuilder &lt;- newDSLoginBuilder()\nbuilder$append(server=\"opal-demo\",\n              url=\"https://opal-demo.obiba.org/\",\n              user=\"administrator\",\n              password=\"password\",\n              driver = \"OpalDriver\",\n              profile = \"omop\")\n\nlogindata &lt;- builder$build()\nconns &lt;- datashield.login(logins=logindata)\n\n\nLogging into the collaborating servers\n\n\n\n\nSetup\n\no &lt;- ds.omop.helper(\n    connections = conns,\n    resource = \"omop_demo.mimiciv\", \n    symbol = \"mimiciv\"\n)\n\n\n\nData retrieval\n\n# Define concept IDs\nconcepts &lt;- list(\n    outcome = 255573,      # Chronic obstructive lung diease (condition)\n    predictor1 = 4005823,  # Tobacco use (observation)\n    predictor2 = 317009    # Asthma (condition)\n)\n\n# Get data\no$auto(\n    table = \"condition_occurrence\", \n    concepts = c(concepts$outcome, concepts$predictor2),\n    columns = c(\"condition_occurrence_id\")\n)\n\no$auto(\n    table = \"observation\", \n    concepts = concepts$predictor1,\n    columns = c(\"observation_id\")\n)\n\n\n\nData preparation\n\n# Convert variables to boolean\nfor (var in c(\"tobacco_user\", \"asthma\", \"chronic_obstructive_lung_disease\")) {\n    id_type &lt;- if(var == \"tobacco_user\") \"observation_id\" else \"condition_occurrence_id\"\n    full_var &lt;- paste0(\"mimiciv$\", var, \".\", id_type)\n    \n    # Convert to numeric\n    ds.asNumeric(x.name = full_var, newobj = paste0(var, \"_num\"), datasources = conns)\n    \n    # Convert to boolean\n    ds.Boole(V1 = paste0(var, \"_num\"), V2 = 0, Boolean.operator = \"!=\", \n             numeric.output = TRUE, na.assign = 0, newobj = var)\n}\n\n# Create analysis table\nds.cbind(\n    x = c(\"chronic_obstructive_lung_disease\", \"tobacco_user\", \"asthma\"),\n    DataSHIELD.checks = FALSE,\n    newobj = \"analysis_table\",\n    datasources = conns\n)\n\n$is.object.created\n[1] \"A data object &lt;analysis_table&gt; has been created in all specified data sources\"\n\n$validity.check\n[1] \"&lt;analysis_table&gt; appears valid in all sources\"\n\n\n\n\nAnalysis\n\nmodel &lt;- ds.glm(\n    formula = \"chronic_obstructive_lung_disease ~ tobacco_user + asthma\", \n    data = \"analysis_table\", \n    family = \"binomial\"\n)\n\nIteration 1...\n\n\nCURRENT DEVIANCE:      138.629436111989\n\n\nIteration 2...\n\n\nCURRENT DEVIANCE:      78.0590708707556\n\n\nIteration 3...\n\n\nCURRENT DEVIANCE:      74.7467187767252\n\n\nIteration 4...\n\n\nCURRENT DEVIANCE:      74.2030114578086\n\n\nIteration 5...\n\n\nCURRENT DEVIANCE:      74.0233507082636\n\n\nIteration 6...\n\n\nCURRENT DEVIANCE:      73.9585499903207\n\n\nIteration 7...\n\n\nCURRENT DEVIANCE:      73.9348750862782\n\n\nIteration 8...\n\n\nCURRENT DEVIANCE:      73.9261875543204\n\n\nIteration 9...\n\n\nCURRENT DEVIANCE:      73.9229945562601\n\n\nIteration 10...\n\n\nCURRENT DEVIANCE:      73.9218203189776\n\n\nIteration 11...\n\n\nCURRENT DEVIANCE:      73.9213883954805\n\n\nIteration 12...\n\n\nCURRENT DEVIANCE:      73.9212295070478\n\n\nIteration 13...\n\n\nCURRENT DEVIANCE:      73.9211710562536\n\n\nIteration 14...\n\n\nCURRENT DEVIANCE:      73.9211495535426\n\n\nIteration 15...\n\n\nCURRENT DEVIANCE:      73.9211416431554\n\n\nIteration 16...\n\n\nCURRENT DEVIANCE:      73.9211387330891\n\n\nIteration 17...\n\n\nCURRENT DEVIANCE:      73.9211376625358\n\n\nIteration 18...\n\n\nCURRENT DEVIANCE:      73.9211372687014\n\n\nSUMMARY OF MODEL STATE after iteration 18\n\n\nCurrent deviance 73.9211372687014 on 97 degrees of freedom\n\n\nConvergence criterion TRUE (5.32056746705131e-09)\n\n\n\nbeta: -1.84582669049832 1.15267950993838 -17.5489136601271\n\n\n\nInformation matrix overall:\n\n\n              (Intercept) tobacco_user       asthma\n(Intercept)  1.103030e+01 6.666667e-01 1.146012e-07\ntobacco_user 6.666667e-01 6.666667e-01 3.249886e-08\nasthma       1.146012e-07 3.249886e-08 1.146012e-07\n\n\n\nScore vector overall:\n\n\n                      [,1]\n(Intercept)  -1.146011e-07\ntobacco_user -3.249885e-08\nasthma       -1.146012e-07\n\n\n\nCurrent deviance: 73.9211372687014\n\nprint(model)\n\n$Nvalid\n[1] 100\n\n$Nmissing\n[1] 0\n\n$Ntotal\n[1] 100\n\n$disclosure.risk\n          RISK OF DISCLOSURE\nopal-demo                  0\n\n$errorMessage\n          ERROR MESSAGES\nopal-demo \"No errors\"   \n\n$nsubs\n[1] 100\n\n$iter\n[1] 18\n\n$family\n\nFamily: binomial \nLink function: logit \n\n\n$formula\n[1] \"chronic_obstructive_lung_disease ~ tobacco_user + asthma\"\n\n$coefficients\n               Estimate   Std. Error      z-value      p-value low0.95CI.LP\n(Intercept)   -1.845827    0.3106304 -5.942196444 2.812281e-09    -2.454651\ntobacco_user   1.152680    1.2635233  0.912274032 3.616245e-01    -1.323781\nasthma       -17.548914 2953.9650106 -0.005940799 9.952600e-01 -5807.213946\n             high0.95CI.LP         P_OR low0.95CI.P_OR high0.95CI.P_OR\n(Intercept)      -1.237002 1.363636e-01     0.07909909       0.2249582\ntobacco_user      3.629140 3.166667e+00     0.26612726      37.6803863\nasthma         5772.116119 2.391132e-08     0.00000000             Inf\n\n$dev\n[1] 73.92114\n\n$df\n[1] 97\n\n$output.information\n[1] \"SEE TOP OF OUTPUT FOR INFORMATION ON MISSING DATA AND ERROR MESSAGES\"\n\n\n\n\nLogout\n\ndatashield.logout(conns)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>dsOMOP COPD Example</span>"
     ]
   }
 ]

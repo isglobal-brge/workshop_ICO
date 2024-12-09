@@ -1,5 +1,5 @@
 ---
-title: "DataSHIELD Workshop"
+title: "Workshop Introduction"
 author: 
   - "Juan R González"
   - "David Sarrat González"

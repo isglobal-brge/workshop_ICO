@@ -13,6 +13,7 @@ book:
   favicon: favicon.ico
   chapters:
     - index.qmd
+    - chapters/dsomop.Rmd
   sidebar:
     logo: logo.svg
 
