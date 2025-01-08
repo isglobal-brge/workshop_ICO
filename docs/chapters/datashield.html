@@ -190,13 +190,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#information-for-newcomers-to-rstudio-notebooks" id="toc-information-for-newcomers-to-rstudio-notebooks" class="nav-link active" data-scroll-target="#information-for-newcomers-to-rstudio-notebooks">INFORMATION FOR NEWCOMERS TO RSTUDIO NOTEBOOKS:</a></li>
-  <li><a href="#datashield-workshop" id="toc-datashield-workshop" class="nav-link" data-scroll-target="#datashield-workshop">DataSHIELD Workshop</a>
-  <ul class="collapse">
   <li><a href="#installing-datashield" id="toc-installing-datashield" class="nav-link" data-scroll-target="#installing-datashield">Installing DataSHIELD</a></li>
-  <li><a href="#logging-in-and-assigning-data" id="toc-logging-in-and-assigning-data" class="nav-link" data-scroll-target="#logging-in-and-assigning-data">Logging in and assigning data</a>
-  <ul class="collapse">
-  <li><a href="#lets-log-in-to-the-opal-online-portal-to-see-what-data-there-is-available-httpsopal-demo.obiba.orguiindex.htmlprojectnamecnsimtabtables" id="toc-lets-log-in-to-the-opal-online-portal-to-see-what-data-there-is-available-httpsopal-demo.obiba.orguiindex.htmlprojectnamecnsimtabtables" class="nav-link" data-scroll-target="#lets-log-in-to-the-opal-online-portal-to-see-what-data-there-is-available-httpsopal-demo.obiba.orguiindex.htmlprojectnamecnsimtabtables">Let’s log in to the opal online portal to see what data there is available (https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES)</a></li>
-  </ul></li>
+  <li><a href="#logging-in-and-assigning-data" id="toc-logging-in-and-assigning-data" class="nav-link" data-scroll-target="#logging-in-and-assigning-data">Logging in and assigning data</a></li>
   <li><a href="#describing-data-aggregate-type-functions" id="toc-describing-data-aggregate-type-functions" class="nav-link" data-scroll-target="#describing-data-aggregate-type-functions">Describing data (‘aggregate-type functions’)</a>
   <ul class="collapse">
   <li><a href="#were-going-to-be-focus-on-hdl_cholesterol." id="toc-were-going-to-be-focus-on-hdl_cholesterol." class="nav-link" data-scroll-target="#were-going-to-be-focus-on-hdl_cholesterol.">We’re going to be focus on hdl_cholesterol.</a></li>
@@ -226,7 +221,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modelling-multiple-variables-and-interactions" id="toc-modelling-multiple-variables-and-interactions" class="nav-link" data-scroll-target="#modelling-multiple-variables-and-interactions">Modelling multiple variables and interactions</a></li>
   </ul></li>
   <li><a href="#at-the-end-of-your-rstudio-server-analysis" id="toc-at-the-end-of-your-rstudio-server-analysis" class="nav-link" data-scroll-target="#at-the-end-of-your-rstudio-server-analysis">At the end of your RStudio Server analysis:</a></li>
-  </ul></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/isglobal-brge/workshop_ICO/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -255,12 +249,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="information-for-newcomers-to-rstudio-notebooks" class="level3">
 <h3 class="anchored" data-anchor-id="information-for-newcomers-to-rstudio-notebooks">INFORMATION FOR NEWCOMERS TO RSTUDIO NOTEBOOKS:</h3>
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
+<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code. <a href="https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/refs/heads/main/book/chapters/datashield.Rmd">Here</a> you can download the .Rmd file to reproduce this bookdown using RStudio (in case the download does not work, right click on the link and select <em>“Save link as…”</em>). You can also copy and paste the R code available in every step.</p>
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
-</section>
-<section id="datashield-workshop" class="level1">
-<h1>DataSHIELD Workshop</h1>
-<p>The plan for this workshop is as follows:</p>
+<p>The plan for this lesson is as follows:</p>
 <ul>
 <li>Installing DataSHIELD</li>
 <li>Logging in and assigning data</li>
@@ -271,9 +262,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Making graphs</li>
 <li>Performing regression analysis</li>
 </ul>
+</section>
 <section id="installing-datashield" class="level2">
 <h2 class="anchored" data-anchor-id="installing-datashield">Installing DataSHIELD</h2>
-<p>Firstly: check whether we have the right R packages installed to run DataSHIELD: using the very helpful devtools package (which has already been installed for us by Stuart!), we’ll use the “Session info” command:</p>
+<p>Firstly: check whether we have the right R packages installed to run DataSHIELD: using the very helpful devtools package, we’ll use the “Session info” command:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
@@ -429,8 +421,7 @@ introduction to the package please type: help(metafor)</code></pre>
 <p>The login script has to be customized to fit the data you are trying to connect to.</p>
 <p>The “builder &lt;-” and “builder$append” functions are standard features.</p>
 <p>For this demonstration we are connecting to simulated data- but if it was data of real people, it would be very important for us not to be able to see individual patients’ information.</p>
-<section id="lets-log-in-to-the-opal-online-portal-to-see-what-data-there-is-available-httpsopal-demo.obiba.orguiindex.htmlprojectnamecnsimtabtables" class="level3">
-<h3 class="anchored" data-anchor-id="lets-log-in-to-the-opal-online-portal-to-see-what-data-there-is-available-httpsopal-demo.obiba.orguiindex.htmlprojectnamecnsimtabtables">Let’s log in to the opal online portal to see what data there is available (https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES)</h3>
+<p>Let’s log in to the <embed src="https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES" class="img-fluid"> to see what data is available.</p>
 <p>We will use the simulated dataset CNSIM, in a data.frame with 4128 observations of 11 harmonized variables. The CNSIM dataset contains synthetic data based on a model derived from the participants of the 1958 Birth Cohort, as part of the obesity methodological development project. This dataset does contain some NA values.</p>
 <p>For the ease of this workshop, we’ll imagine that each study is hosted by a different partner of DataSHIELD: the first by UMCG Groningen (where EUCAN-Connect is based), the second by Liverpool University (where DataSHIELD core team is based) and the third by Barcelona (where ISGlobal is based). The below code creates a local R object with the login details for each study:</p>
 <div class="cell">
@@ -491,7 +482,6 @@ $study3$objects.found
 <p>Here you see one dataframe in each study called ‘D’ (this name was set using the ‘symbol’ argument in datashield.login above).</p>
 <section id="section" class="level80">
 <p class="heading"></p>
-</section>
 </section>
 </section>
 <section id="describing-data-aggregate-type-functions" class="level2">
@@ -2861,10 +2851,10 @@ $study3$objects.found
 <p>Also you can delete unwanted workspaces using the datashield.workspace_rm</p>
 <p>In Rstudio Server: DON’T forget to use the orange “quit the current R session” button (top right of browser screen) before closing the tab- otherwise you will experience an error message the next time you try to log in.</p>
 </section>
-</section>
 <section id="exercise" class="level1">
 <h1>Exercise</h1>
-<p>We have access to 3 datasets corresponding to simulated data from UKBiobank available through CINECA study. This data reproduces the exact associations found at UKBiobank. Next table shows the data dictionary of XX selected variables. The three datasets are accessed in this Opal server (https://opal-demo.obiba.org/) in a project called GWAS as three different resources (named ega_phenotypes_1, ega_phenotypes_2 and ega_phenotypes_3). Start by installing the required R packages by typing</p>
+<p>We have access to 3 datasets corresponding to simulated data from UKBiobank available through CINECA study. This data reproduces the exact associations found at UKBiobank. The data dictionary of 73 selected variables is available <a href="https://github.com/isglobal-brge/brge_data_large/blob/master/inst/extdata/GWAS_students/data_dictionary.xlsx">here</a>.</p>
+<p>Start by installing the required R packages by typing</p>
 <pre><code>library(devtools)
 install.packages("DSI")
 install_github("datashield/dsBaseClient")</code></pre>

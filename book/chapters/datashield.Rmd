@@ -4,13 +4,11 @@ output: html_notebook
 ---
 ### INFORMATION FOR NEWCOMERS TO RSTUDIO NOTEBOOKS: 
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. [Here](https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/refs/heads/main/book/chapters/datashield.Rmd) you can download the .Rmd file to reproduce this bookdown using RStudio (in case the download does not work, right click on the link and select *"Save link as..."*). You can also copy and paste the R code available in every step.
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
-# DataSHIELD Workshop
-
-The plan for this workshop is as follows:
+The plan for this lesson is as follows:
 
 - Installing DataSHIELD
 - Logging in and assigning data
@@ -23,7 +21,7 @@ The plan for this workshop is as follows:
 
 ## Installing DataSHIELD
 
-Firstly: check whether we have the right R packages installed to run DataSHIELD: using the very helpful devtools package (which has already been installed for us by Stuart!), we'll use the "Session info" command:
+Firstly: check whether we have the right R packages installed to run DataSHIELD: using the very helpful devtools package, we'll use the "Session info" command:
 
 ```{r eval=FALSE}
 install.packages("devtools")
@@ -64,7 +62,7 @@ The "builder <-" and "builder$append" functions are standard features.
 
 For this demonstration we are connecting to simulated data- but if it was data of real people, it would be very important for us not to be able to see individual patients' information.
 
-### Let's log in to the opal online portal to see what data there is available (https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES) 
+Let's log in to the ![Opal online portal](https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES) to see what data is available. 
 
 We will use the simulated dataset CNSIM, in a data.frame with 4128 observations of 11 harmonized variables. The CNSIM dataset contains synthetic data based on a model derived from the participants of the 1958 Birth Cohort, as part of the obesity methodological development project. This dataset does contain some NA values.
 
@@ -611,7 +609,8 @@ In Rstudio Server: DON'T forget to use the orange "quit the current R session" b
 
 # Exercise
 
-We have access to 3 datasets corresponding to simulated data from UKBiobank available through CINECA study. This data reproduces the exact associations found at UKBiobank. Next table shows the data dictionary of XX selected variables. The three datasets are accessed in this Opal server (https://opal-demo.obiba.org/) in a project called GWAS as three different resources (named ega_phenotypes_1, ega_phenotypes_2 and ega_phenotypes_3).
+We have access to 3 datasets corresponding to simulated data from UKBiobank available through CINECA study. This data reproduces the exact associations found at UKBiobank. The data dictionary of 73 selected variables is available [here](https://github.com/isglobal-brge/brge_data_large/blob/master/inst/extdata/GWAS_students/data_dictionary.xlsx).
+
 Start by installing the required R packages by typing
 ```
 library(devtools)
