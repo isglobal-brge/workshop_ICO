@@ -20,14 +20,30 @@ Login credentials for the demo server are:
 - Username: `dsuser`
 - Password: `P@ssw0rd`
 
+## Prerequisites
+
+Before starting, make sure to install the required R packages in your local machine:
+
+```{r eval=FALSE}
+install.packages('DSI')
+install.packages('DSOpal')
+install.packages('dsBaseClient', repos='http://cran.obiba.org', type='source', dependencies=TRUE)
+install.packages('metafor')
+devtools::install_github('lifecycle-project/ds-helper')
+devtools::install_github('isglobal-brge/dsOMOPClient')
+devtools::install_github('isglobal-brge/dsOMOPHelper')
+```
+
 ## Schedule
 
-| Time   | Topic                                     |
-|--------|-------------------------------------------|
-| 09:00  | Welcome                                   |
-| 09:15  | DataSHIELD: Introduction and Infrastructure|
-| 10:00  | Q&A                                       |
-| 12:30  | End                                       |
+| Time          | Topic                                                                               |
+|---------------|-------------------------------------------------------------------------------------|
+| 09:00         | Welcome                                                                             |
+| 09:15 - 09:45 | Introduction to DataSHIELD and OPAL                                                 |
+| 09:45 - 11:00 | Workshop DataSHIELD data analysis + Exercise                                        |
+| 11:00 - 11:30 | Break                                                                               |
+| 11:30 - 12:00 | Introduction to OMOP and dsOMOP and extensions (dsHelper and dsOMOP.oracle)         |
+| 12:00 - 12:30 | Workshop dsOMOP cancer data analysis from OMOP database                             |
 
 ## Credits
 
