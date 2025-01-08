@@ -54,7 +54,7 @@
     "href": "chapters/datashield.html",
     "title": "DataSHIELD Workshop",
     "section": "",
-    "text": "INFORMATION FOR NEWCOMERS TO RSTUDIO NOTEBOOKS:\nThis is an R Markdown Notebook. When you execute code within the notebook, the results appear beneath the code. Here you can download the .Rmd file to reproduce this bookdown using RStudio (in case the download does not work, right click on the link and select “Save link as…”). You can also copy and paste the R code available in every step.\nTry executing this chunk by clicking the Run button within the chunk or by placing your cursor inside it and pressing Ctrl+Shift+Enter.\nThe plan for this lesson is as follows:",
+    "text": "INFORMATION FOR NEWCOMERS TO RSTUDIO NOTEBOOKS:\nThis is an R Markdown Notebook. When you execute code within the notebook, the results appear beneath the code. Here you can download the .Rmd file to reproduce this bookdown using RStudio (in case the download does not work, right click on the link and select “Save link as…”). You can also copy and paste the R code available in every step.\nTry executing each chunk by clicking the Run button within the chunk or by placing your cursor inside it and pressing Ctrl+Shift+Enter.\nThe plan for this lesson is as follows:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>DataSHIELD Workshop</span>"
     ]

@@ -6,7 +6,7 @@ output: html_notebook
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. [Here](https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/refs/heads/main/book/chapters/datashield.Rmd) you can download the .Rmd file to reproduce this bookdown using RStudio (in case the download does not work, right click on the link and select *"Save link as..."*). You can also copy and paste the R code available in every step.
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+Try executing each chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
 The plan for this lesson is as follows:
 
