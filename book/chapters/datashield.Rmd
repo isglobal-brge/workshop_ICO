@@ -50,7 +50,7 @@ library(metafor)
 
 Check that they have now been added:
 
-```{r}
+```{r results='hide'}
 devtools::session_info()
 ```
 
@@ -62,7 +62,7 @@ The "builder <-" and "builder$append" functions are standard features.
 
 For this demonstration we are connecting to simulated data- but if it was data of real people, it would be very important for us not to be able to see individual patients' information.
 
-Let's log in to the ![Opal online portal](https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES) to see what data is available. 
+Let's log in to the [Opal online portal](https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES) to see what data is available. 
 
 We will use the simulated dataset CNSIM, in a data.frame with 4128 observations of 11 harmonized variables. The CNSIM dataset contains synthetic data based on a model derived from the participants of the 1958 Birth Cohort, as part of the obesity methodological development project. This dataset does contain some NA values.
 

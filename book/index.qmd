@@ -34,6 +34,13 @@ devtools::install_github('isglobal-brge/dsOMOPClient')
 devtools::install_github('isglobal-brge/dsOMOPHelper')
 ```
 
+## Slides
+
+You can find the slides used in the workshop in the following links:
+
+- [DataSHIELD slides](https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/main/slides/datashield_slides.pdf)
+- dsOMOP slides
+
 ## Schedule
 
 | Time          | Topic                                                                               |

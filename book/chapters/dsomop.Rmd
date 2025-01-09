@@ -37,6 +37,13 @@ o <- ds.omop.helper(
 )
 ```
 
+# Data catalogs
+
+```{r data_catalogs}
+condition_list <- o$concepts("condition_occurrence")
+condition_list
+```
+
 # Data retrieval
 
 ```{r data_retrieval}
@@ -89,7 +96,7 @@ ds.cbind(
 
 # Analysis
 
-```{r analysis}
+```{r analysis, message=FALSE}
 model <- ds.glm(
     formula = "chronic_obstructive_lung_disease ~ tobacco_user + asthma", 
     data = "analysis_table", 

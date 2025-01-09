@@ -1,0 +1,69 @@
+/* Keep code chunks together */
+.cell {
+  margin-bottom: 1.5em;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Style for code cells */
+.cell-code {
+  background: #f5f7fa;  /* Subtle blue-grey background */
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 0.8em;
+  margin-bottom: 0;
+}
+
+/* Style for output cells */
+.cell-output {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  background: #ffffff;  /* Clean white background for output */
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* Remove spacing between code and output */
+.cell > .sourceCode {
+  margin-bottom: 0;
+}
+
+/* Style the scrollbar */
+.cell-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cell-output::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.cell-output::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+
+.cell-output::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Style code within cells */
+.sourceCode pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style copy button */
+.code-copy-button {
+  border: none;
+  background: transparent;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.code-copy-button:hover {
+  opacity: 1;
+} 

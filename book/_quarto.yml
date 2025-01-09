@@ -22,3 +22,8 @@ format:
   html:
     theme: cosmo
     number-sections: false
+    css: ../docs/custom.css
+    execute:
+      warning: false
+      message: false
+      error: false

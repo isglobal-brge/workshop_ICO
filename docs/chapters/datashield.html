@@ -105,6 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="../../docs/custom.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -281,139 +282,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Remember to load them into this R session using “library()” command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSI)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: progress</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: R6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: opalr</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: httr</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsBaseClient)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsHelper)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metafor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: Matrix</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: metadat</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: numDeriv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Loading the 'metafor' package (version 4.6-0). For an
-introduction to the package please type: help(metafor)</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSI)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DSOpal)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsBaseClient)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsHelper)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metafor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Check that they have now been added:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>─ Session info ───────────────────────────────────────────────────────────────
- setting  value
- version  R version 4.4.2 (2024-10-31)
- os       macOS Sonoma 14.5
- system   aarch64, darwin20
- ui       X11
- language (EN)
- collate  en_US.UTF-8
- ctype    en_US.UTF-8
- tz       Europe/Madrid
- date     2025-01-08
- pandoc   3.6 @ /opt/homebrew/bin/ (via rmarkdown)
-
-─ Packages ───────────────────────────────────────────────────────────────────
- package      * version    date (UTC) lib source
- backports      1.5.0      2024-05-23 [1] CRAN (R 4.4.0)
- boot           1.3-31     2024-08-28 [1] CRAN (R 4.4.2)
- cachem         1.1.0      2024-05-16 [1] CRAN (R 4.4.0)
- checkmate      2.3.2      2024-07-29 [1] CRAN (R 4.4.0)
- cli            3.6.3      2024-06-21 [1] CRAN (R 4.4.0)
- crayon         1.5.3      2024-06-20 [1] CRAN (R 4.4.0)
- data.table     1.16.4     2024-12-06 [1] CRAN (R 4.4.1)
- devtools       2.4.5      2022-10-11 [1] CRAN (R 4.4.0)
- digest         0.6.37     2024-08-19 [1] CRAN (R 4.4.1)
- dplyr          1.1.4      2023-11-17 [1] CRAN (R 4.4.0)
- dsBaseClient * 6.3.0      2025-01-08 [1] local
- dsHelper     * 1.0.3.9000 2025-01-08 [1] Github (lifecycle-project/ds-helper@f5ed1e6)
- DSI          * 1.7.1      2024-11-03 [1] CRAN (R 4.4.1)
- DSOpal       * 1.4.0      2022-10-06 [1] CRAN (R 4.4.0)
- ellipsis       0.3.2      2021-04-29 [1] CRAN (R 4.4.0)
- evaluate       1.0.1      2024-10-10 [1] CRAN (R 4.4.1)
- fastmap        1.2.0      2024-05-15 [1] CRAN (R 4.4.0)
- forcats        1.0.0      2023-01-29 [1] CRAN (R 4.4.0)
- fs             1.6.5      2024-10-30 [1] CRAN (R 4.4.1)
- generics       0.1.3      2022-07-05 [1] CRAN (R 4.4.0)
- glue           1.8.0      2024-09-30 [1] CRAN (R 4.4.1)
- haven          2.5.4      2023-11-30 [1] CRAN (R 4.4.0)
- hms            1.1.3      2023-03-21 [1] CRAN (R 4.4.0)
- htmltools      0.5.8.1    2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets    1.6.4      2023-12-06 [1] CRAN (R 4.4.0)
- httpuv         1.6.15     2024-03-26 [1] CRAN (R 4.4.0)
- httr         * 1.4.7      2023-08-15 [1] CRAN (R 4.4.0)
- jsonlite       1.8.9      2024-09-20 [1] CRAN (R 4.4.1)
- knitr          1.49       2024-11-08 [1] CRAN (R 4.4.1)
- labelled       2.13.0     2024-04-23 [1] CRAN (R 4.4.0)
- later          1.4.1      2024-11-27 [1] CRAN (R 4.4.1)
- lattice        0.22-6     2024-03-20 [1] CRAN (R 4.4.2)
- lifecycle      1.0.4      2023-11-07 [1] CRAN (R 4.4.0)
- lme4           1.1-35.5   2024-07-03 [1] CRAN (R 4.4.0)
- magrittr       2.0.3      2022-03-30 [1] CRAN (R 4.4.0)
- MASS           7.3-61     2024-06-13 [1] CRAN (R 4.4.2)
- mathjaxr       1.6-0      2022-02-28 [1] CRAN (R 4.4.0)
- Matrix       * 1.7-1      2024-10-18 [1] CRAN (R 4.4.2)
- memoise        2.0.1      2021-11-26 [1] CRAN (R 4.4.0)
- metadat      * 1.2-0      2022-04-06 [1] CRAN (R 4.4.0)
- metafor      * 4.6-0      2024-03-28 [1] CRAN (R 4.4.0)
- mime           0.12       2021-09-28 [1] CRAN (R 4.4.0)
- miniUI         0.1.1.1    2018-05-18 [1] CRAN (R 4.4.0)
- minqa          1.2.8      2024-08-17 [1] CRAN (R 4.4.0)
- nlme           3.1-166    2024-08-14 [1] CRAN (R 4.4.2)
- nloptr         2.1.1      2024-06-25 [1] CRAN (R 4.4.0)
- numDeriv     * 2016.8-1.1 2019-06-06 [1] CRAN (R 4.4.0)
- opalr        * 3.4.2      2024-09-18 [1] CRAN (R 4.4.1)
- pillar         1.10.1     2025-01-07 [1] CRAN (R 4.4.1)
- pkgbuild       1.4.5      2024-10-28 [1] CRAN (R 4.4.1)
- pkgconfig      2.0.3      2019-09-22 [1] CRAN (R 4.4.0)
- pkgload        1.4.0      2024-06-28 [1] CRAN (R 4.4.0)
- prettyunits    1.2.0      2023-09-24 [1] CRAN (R 4.4.0)
- profvis        0.4.0      2024-09-20 [1] CRAN (R 4.4.1)
- progress     * 1.2.3      2023-12-06 [1] CRAN (R 4.4.0)
- promises       1.3.2      2024-11-28 [1] CRAN (R 4.4.1)
- purrr          1.0.2      2023-08-10 [1] CRAN (R 4.4.0)
- R6           * 2.5.1      2021-08-19 [1] CRAN (R 4.4.0)
- Rcpp           1.0.13-1   2024-11-02 [1] CRAN (R 4.4.1)
- readr          2.1.5      2024-01-10 [1] CRAN (R 4.4.0)
- remotes        2.5.0      2024-03-17 [1] CRAN (R 4.4.0)
- rlang          1.1.4      2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown      2.29       2024-11-04 [1] CRAN (R 4.4.1)
- sessioninfo    1.2.2      2021-12-06 [1] CRAN (R 4.4.0)
- shiny          1.10.0     2024-12-14 [1] CRAN (R 4.4.1)
- stringi        1.8.4      2024-05-06 [1] CRAN (R 4.4.0)
- stringr        1.5.1      2023-11-14 [1] CRAN (R 4.4.0)
- tibble         3.2.1      2023-03-20 [1] CRAN (R 4.4.0)
- tidyr          1.3.1      2024-01-24 [1] CRAN (R 4.4.0)
- tidyselect     1.2.1      2024-03-11 [1] CRAN (R 4.4.0)
- tzdb           0.4.0      2023-05-12 [1] CRAN (R 4.4.0)
- urlchecker     1.0.1      2021-11-30 [1] CRAN (R 4.4.0)
- usethis        3.1.0      2024-11-26 [1] CRAN (R 4.4.1)
- vctrs          0.6.5      2023-12-01 [1] CRAN (R 4.4.0)
- xfun           0.49       2024-10-31 [1] CRAN (R 4.4.1)
- xtable         1.8-4      2019-04-21 [1] CRAN (R 4.4.0)
- yaml           2.3.10     2024-07-26 [1] CRAN (R 4.4.0)
-
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
-
-──────────────────────────────────────────────────────────────────────────────</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="logging-in-and-assigning-data" class="level2">
@@ -421,39 +298,25 @@ introduction to the package please type: help(metafor)</code></pre>
 <p>The login script has to be customized to fit the data you are trying to connect to.</p>
 <p>The “builder &lt;-” and “builder$append” functions are standard features.</p>
 <p>For this demonstration we are connecting to simulated data- but if it was data of real people, it would be very important for us not to be able to see individual patients’ information.</p>
-<p>Let’s log in to the <embed src="https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES" class="img-fluid"> to see what data is available.</p>
+<p>Let’s log in to the <a href="https://opal-demo.obiba.org/ui/index.html#!project;name=CNSIM;tab=TABLES">Opal online portal</a> to see what data is available.</p>
 <p>We will use the simulated dataset CNSIM, in a data.frame with 4128 observations of 11 harmonized variables. The CNSIM dataset contains synthetic data based on a model derived from the participants of the 1958 Birth Cohort, as part of the obesity methodological development project. This dataset does contain some NA values.</p>
 <p>For the ease of this workshop, we’ll imagine that each study is hosted by a different partner of DataSHIELD: the first by UMCG Groningen (where EUCAN-Connect is based), the second by Liverpool University (where DataSHIELD core team is based) and the third by Barcelona (where ISGlobal is based). The below code creates a local R object with the login details for each study:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>builder <span class="ot">&lt;-</span> DSI<span class="sc">::</span><span class="fu">newDSLoginBuilder</span>()</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>builder<span class="sc">$</span><span class="fu">append</span>(<span class="at">server =</span> <span class="st">"study1"</span>, <span class="at">url =</span> <span class="st">"https://opal-demo.obiba.org"</span>, <span class="at">user =</span> <span class="st">"dsuser"</span>, <span class="at">password =</span> <span class="st">"P@ssw0rd"</span>, <span class="at">table =</span> <span class="st">"CNSIM.CNSIM1"</span>, <span class="at">driver =</span> <span class="st">"OpalDriver"</span>, <span class="at">options=</span><span class="st">'list(ssl_verifyhost=0, ssl_verifypeer=0)'</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>builder<span class="sc">$</span><span class="fu">append</span>(<span class="at">server =</span> <span class="st">"study2"</span>, <span class="at">url =</span> <span class="st">"https://opal-demo.obiba.org"</span>, <span class="at">user =</span> <span class="st">"dsuser"</span>, <span class="at">password =</span> <span class="st">"P@ssw0rd"</span>, <span class="at">table =</span> <span class="st">"CNSIM.CNSIM2"</span>, <span class="at">driver =</span> <span class="st">"OpalDriver"</span>, <span class="at">options=</span><span class="st">'list(ssl_verifyhost=0, ssl_verifypeer=0)'</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>builder<span class="sc">$</span><span class="fu">append</span>(<span class="at">server =</span> <span class="st">"study3"</span>, <span class="at">url =</span> <span class="st">"https://opal-demo.obiba.org"</span>, <span class="at">user =</span> <span class="st">"dsuser"</span>, <span class="at">password =</span> <span class="st">"P@ssw0rd"</span>, <span class="at">table =</span> <span class="st">"CNSIM.CNSIM3"</span>, <span class="at">driver =</span> <span class="st">"OpalDriver"</span>, <span class="at">options=</span><span class="st">'list(ssl_verifyhost=0, ssl_verifypeer=0)'</span>)</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>logindata <span class="ot">&lt;-</span> builder<span class="sc">$</span><span class="fu">build</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>builder <span class="ot">&lt;-</span> DSI<span class="sc">::</span><span class="fu">newDSLoginBuilder</span>()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>builder<span class="sc">$</span><span class="fu">append</span>(<span class="at">server =</span> <span class="st">"study1"</span>, <span class="at">url =</span> <span class="st">"https://opal-demo.obiba.org"</span>, <span class="at">user =</span> <span class="st">"dsuser"</span>, <span class="at">password =</span> <span class="st">"P@ssw0rd"</span>, <span class="at">table =</span> <span class="st">"CNSIM.CNSIM1"</span>, <span class="at">driver =</span> <span class="st">"OpalDriver"</span>, <span class="at">options=</span><span class="st">'list(ssl_verifyhost=0, ssl_verifypeer=0)'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>builder<span class="sc">$</span><span class="fu">append</span>(<span class="at">server =</span> <span class="st">"study2"</span>, <span class="at">url =</span> <span class="st">"https://opal-demo.obiba.org"</span>, <span class="at">user =</span> <span class="st">"dsuser"</span>, <span class="at">password =</span> <span class="st">"P@ssw0rd"</span>, <span class="at">table =</span> <span class="st">"CNSIM.CNSIM2"</span>, <span class="at">driver =</span> <span class="st">"OpalDriver"</span>, <span class="at">options=</span><span class="st">'list(ssl_verifyhost=0, ssl_verifypeer=0)'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>builder<span class="sc">$</span><span class="fu">append</span>(<span class="at">server =</span> <span class="st">"study3"</span>, <span class="at">url =</span> <span class="st">"https://opal-demo.obiba.org"</span>, <span class="at">user =</span> <span class="st">"dsuser"</span>, <span class="at">password =</span> <span class="st">"P@ssw0rd"</span>, <span class="at">table =</span> <span class="st">"CNSIM.CNSIM3"</span>, <span class="at">driver =</span> <span class="st">"OpalDriver"</span>, <span class="at">options=</span><span class="st">'list(ssl_verifyhost=0, ssl_verifypeer=0)'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>logindata <span class="ot">&lt;-</span> builder<span class="sc">$</span><span class="fu">build</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The error message displayed here- in production, would use https. But no need here (a self-contained environment, no risks).</p>
 <p>Now we need to connect, referring to the login information in the data frame we have just created:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>connections <span class="ot">&lt;-</span> DSI<span class="sc">::</span><span class="fu">datashield.login</span>(<span class="at">logins =</span> logindata, <span class="at">assign =</span> <span class="cn">TRUE</span>, <span class="at">symbol =</span> <span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Logging into the collaborating servers</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-  No variables have been specified. 
-  All the variables in the table 
-  (the whole dataset) will be assigned to R!</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Assigning table data...</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>connections <span class="ot">&lt;-</span> DSI<span class="sc">::</span><span class="fu">datashield.login</span>(<span class="at">logins =</span> logindata, <span class="at">assign =</span> <span class="cn">TRUE</span>, <span class="at">symbol =</span> <span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The ‘assign’ argument can be set to either ‘TRUE’ or ‘FALSE’. If set to ‘TRUE’, all the available variables within that table will be assigned to a serverside data frame and available to access. If you only need a small subset of available variables it can be preferable to set this to ‘FALSE’ and later use the function ‘datashield.assign’ to separately assign only the variables you need. The output of this box has useful progress bars which show the progress of connecting to studies, one by one.</p>
 <p>We can see the serverside object that has been created by running:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$environment.searched
@@ -493,7 +356,7 @@ $study3$objects.found
 <p>There are many data exploration functions already implemented into DataSHIELD: let’s check it out at the wiki https://data2knowledge.atlassian.net/wiki/spaces/DSDEV/pages/1184825438/List+of+all+DataSHIELD+functions+v6.1</p>
 <p>Scroll down to “Data structure queries”. Let’s try out a few of these:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dim</span>(<span class="at">x=</span><span class="st">"D"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dim</span>(<span class="at">x=</span><span class="st">"D"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`dimensions of D in study1`
 [1] 2163   11
@@ -507,7 +370,7 @@ $`dimensions of D in study3`
 $`dimensions of D in combined studies`
 [1] 9379   11</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="at">x=</span><span class="st">"D"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="at">x=</span><span class="st">"D"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
  [1] "LAB_TSC"            "LAB_TRIG"           "LAB_HDL"           
@@ -533,7 +396,7 @@ $study3
 <p>This is a measure of HDL Cholesterol (aka the “good cholesterol” level)</p>
 <p>Let’s run some summary statistic commands</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.class</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.class</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 [1] "numeric"
@@ -544,7 +407,7 @@ $study2
 $study3
 [1] "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.length</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.length</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`length of D$LAB_HDL in study1`
 [1] 2163
@@ -558,7 +421,7 @@ $`length of D$LAB_HDL in study3`
 $`total length of D$LAB_HDL in all studies combined`
 [1] 9379</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Mean.by.Study
        EstimatedMean Nmissing Nvalid Ntotal
@@ -578,19 +441,16 @@ study3 "VALID ANALYSIS"</code></pre>
 </div>
 <p>What is this other function to obtain the mean? Let’s use the DataSHIELD function help documentation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>?ds.quantileMean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>?ds.quantileMean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, putting into action some of what we’ve learned about the function arguments.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.quantileMean</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code> Quantiles of the pooled data</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.quantileMean</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       5%       10%       25%       50%       75%       90%       95%      Mean 
 0.8678198 1.0388227 1.2998328 1.5787193 1.8481549 2.0896969 2.2302836 1.5676188 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.quantileMean</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>,<span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.quantileMean</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>,<span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
       5%      10%      25%      50%      75%      90%      95%     Mean 
@@ -607,10 +467,10 @@ $study3
 </div>
 <p>Trying to calculate the variance of HDL Cholesterol:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>?ds.var</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>?ds.var</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.var</span>(<span class="at">x =</span> <span class="st">"D$LAB_HDL"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.var</span>(<span class="at">x =</span> <span class="st">"D$LAB_HDL"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Variance.by.Study
        EstimatedVar Nmissing Nvalid Ntotal
@@ -631,16 +491,16 @@ study3 "VALID ANALYSIS"</code></pre>
 <p>Can we store the results calculated from a DataSHIELD analysis in a local R session?</p>
 <p>Yes- the output of aggregate functions are always R objects, hence can be stored.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">&lt;-</span><span class="fu">ds.var</span>(<span class="at">x =</span> <span class="st">"D$LAB_HDL"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)[[<span class="dv">1</span>]]</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">&lt;-</span><span class="fu">ds.var</span>(<span class="at">x =</span> <span class="st">"D$LAB_HDL"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)[[<span class="dv">1</span>]]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       EstimatedVar Nmissing Nvalid Ntotal
 study1    0.1707959      360   1803   2163
 study2    0.1786661      555   2533   3088
 study3    0.1785256      655   3473   4128</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>b<span class="ot">&lt;-</span><span class="fu">ds.var</span>(<span class="at">x =</span> <span class="st">"D$LAB_HDL"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)[[<span class="dv">1</span>]][[<span class="dv">1</span>,<span class="dv">1</span>]]</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>b<span class="ot">&lt;-</span><span class="fu">ds.var</span>(<span class="at">x =</span> <span class="st">"D$LAB_HDL"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources =</span> connections)[[<span class="dv">1</span>]][[<span class="dv">1</span>,<span class="dv">1</span>]]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1707959</code></pre>
 </div>
@@ -652,18 +512,13 @@ study3    0.1785256      655   3473   4128</code></pre>
 <p>As you may have noticed, some operations which are more straightforward in R can be more complicated in datashield. To help with this, the dsHelper package allows you to do some common operations in fewer lines of code. DsHelper is an entirely serverside package - it contains only clientside functions which call DataSHIELD functions serverside.</p>
 <p>We have seen datashield has a range of functions to retrieve statistics, but is limited in that (i) you need to use different functions for different statistics, (ii) you can only get stats for one variable at a time. dh.GetStats returns many useful stats in a tibble, and allows you to retrieve stats for multiple variables at a time.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>neat_stats <span class="ot">&lt;-</span> <span class="fu">dh.getStats</span>(</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> <span class="st">"D"</span>,</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"LAB_TSC"</span>, <span class="st">"LAB_TRIG"</span>, <span class="st">"LAB_HDL"</span>, <span class="st">"LAB_GLUC_ADJUSTED"</span>, </span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"PM_BMI_CONTINUOUS"</span>, <span class="st">"DIS_CVA"</span>, <span class="st">"MEDI_LPD"</span>, <span class="st">"DIS_DIAB"</span>, <span class="st">"DIS_AMI"</span>, </span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">"GENDER"</span>, <span class="st">"PM_BMI_CATEGORICAL"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Automatic coercion from integer to character was deprecated in purrr 1.0.0.
-ℹ Please use an explicit call to `as.character()` within `map_chr()` instead.
-ℹ The deprecated feature was likely used in the base package.
-  Please report the issue to the authors.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>neat_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>neat_stats <span class="ot">&lt;-</span> <span class="fu">dh.getStats</span>(</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> <span class="st">"D"</span>,</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"LAB_TSC"</span>, <span class="st">"LAB_TRIG"</span>, <span class="st">"LAB_HDL"</span>, <span class="st">"LAB_GLUC_ADJUSTED"</span>, </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"PM_BMI_CONTINUOUS"</span>, <span class="st">"DIS_CVA"</span>, <span class="st">"MEDI_LPD"</span>, <span class="st">"DIS_DIAB"</span>, <span class="st">"DIS_AMI"</span>, </span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">"GENDER"</span>, <span class="st">"PM_BMI_CATEGORICAL"</span>))</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>           </span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>neat_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$categorical
 # A tibble: 64 × 10
@@ -721,7 +576,7 @@ $continuous
 <p>The reason for this is that some calculations could be highly disclosive- and if such data were transmitted to the analyst, with not much effort at all, with an inverse function, the analyst could work out exactly what the raw data are- and thus the data’s privacy is broken!</p>
 <p>To demonstrate:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>(<span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>(<span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$environment.searched
@@ -746,8 +601,8 @@ $study3$environment.searched
 $study3$objects.found
 [1] "D"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.log</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">newobj=</span><span class="st">'LAB_HDL_log'</span>, <span class="at">datasources =</span> connections)</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>(<span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.log</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">newobj=</span><span class="st">'LAB_HDL_log'</span>, <span class="at">datasources =</span> connections)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>(<span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$environment.searched
@@ -772,7 +627,7 @@ $study3$environment.searched
 $study3$objects.found
 [1] "D"           "LAB_HDL_log"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"LAB_HDL_log"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"LAB_HDL_log"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Mean.by.Study
        EstimatedMean Nmissing Nvalid Ntotal
@@ -789,7 +644,7 @@ study1 "VALID ANALYSIS"
 study2 "VALID ANALYSIS"
 study3 "VALID ANALYSIS"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"D$LAB_HDL"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"D$LAB_HDL"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Mean.by.Study
        EstimatedMean Nmissing Nvalid Ntotal
@@ -810,8 +665,8 @@ study3 "VALID ANALYSIS"</code></pre>
 <p>The second “ds.mean” shows that the mean of the logged values are definitely smaller, by about the right amount. The DataSHIELD log function has worked.</p>
 <p>There is another DataSHIELD assign function that can be used for data transformations - a square root function. Let’s test again:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.sqrt</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">newobj=</span><span class="st">'LAB_HDL_sqrt'</span>, <span class="at">datasources =</span> connections)</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>(<span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.sqrt</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">newobj=</span><span class="st">'LAB_HDL_sqrt'</span>, <span class="at">datasources =</span> connections)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>(<span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$environment.searched
@@ -836,7 +691,7 @@ $study3$environment.searched
 $study3$objects.found
 [1] "D"            "LAB_HDL_log"  "LAB_HDL_sqrt"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"LAB_HDL_sqrt"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"LAB_HDL_sqrt"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Mean.by.Study
        EstimatedMean Nmissing Nvalid Ntotal
@@ -853,7 +708,7 @@ study1 "VALID ANALYSIS"
 study2 "VALID ANALYSIS"
 study3 "VALID ANALYSIS"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"D$LAB_HDL"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.mean</span>(<span class="at">x=</span><span class="st">"D$LAB_HDL"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Mean.by.Study
        EstimatedMean Nmissing Nvalid Ntotal
@@ -874,7 +729,7 @@ study3 "VALID ANALYSIS"</code></pre>
 <p>These new objects are not attached to a dataframe. Use the help function to find out about the ds.dataFrame function, which can be used to combine objects.</p>
 <p>Now join “LAB_HDL_sqrt” and “LAB_HDL_log” to the dataframe “D”.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrame</span>(<span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"LAB_HDL_sqrt"</span>, <span class="st">"LAB_HDL_log"</span>), <span class="at">newobj =</span> <span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrame</span>(<span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"LAB_HDL_sqrt"</span>, <span class="st">"LAB_HDL_log"</span>), <span class="at">newobj =</span> <span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;D&gt; has been created in all specified data sources"
@@ -882,7 +737,7 @@ study3 "VALID ANALYSIS"</code></pre>
 $validity.check
 [1] "&lt;D&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
  [1] "LAB_TSC"            "LAB_TRIG"           "LAB_HDL"           
@@ -915,8 +770,8 @@ $study3
 <p>You may wish to use it to:</p>
 <p>Subset a column of data by its “Class” Subset a dataframe to remove any “NA”s Subset a numeric column of a dataframe using a Boolean inequalilty</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first find the column name you wish to refer to</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="at">x=</span><span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first find the column name you wish to refer to</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="at">x=</span><span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
  [1] "LAB_TSC"            "LAB_TRIG"           "LAB_HDL"           
@@ -939,8 +794,8 @@ $study3
 [10] "GENDER"             "PM_BMI_CATEGORICAL" "LAB_HDL_sqrt"      
 [13] "LAB_HDL_log"       </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># then check which levels you need to apply a boolean operator to:</span></span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.levels</span>(<span class="at">x=</span><span class="st">"D$GENDER"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># then check which levels you need to apply a boolean operator to:</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.levels</span>(<span class="at">x=</span><span class="st">"D$GENDER"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$Levels
@@ -965,11 +820,11 @@ $study3$Levels
 $study3$ValidityMessage
 [1] "VALID ANALYSIS"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>?ds.dataFrameSubset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>?ds.dataFrameSubset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Splitting into GENDER groups, assigned to different server-side objects.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D"</span>, <span class="at">V1.name =</span> <span class="st">"D$GENDER"</span>, <span class="at">V2.name =</span> <span class="st">"1"</span>, <span class="at">Boolean.operator =</span> <span class="st">"=="</span>, <span class="at">newobj =</span> <span class="st">"CNSIM.subset.Males"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D"</span>, <span class="at">V1.name =</span> <span class="st">"D$GENDER"</span>, <span class="at">V2.name =</span> <span class="st">"1"</span>, <span class="at">Boolean.operator =</span> <span class="st">"=="</span>, <span class="at">newobj =</span> <span class="st">"CNSIM.subset.Males"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;CNSIM.subset.Males&gt; has been created in all specified data sources"
@@ -977,7 +832,7 @@ $study3$ValidityMessage
 $validity.check
 [1] "&lt;CNSIM.subset.Males&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D"</span>, <span class="at">V1.name =</span> <span class="st">"D$GENDER"</span>, <span class="at">V2.name =</span> <span class="st">"0"</span>, <span class="at">Boolean.operator =</span> <span class="st">"=="</span>, <span class="at">newobj =</span> <span class="st">"CNSIM.subset.Females"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D"</span>, <span class="at">V1.name =</span> <span class="st">"D$GENDER"</span>, <span class="at">V2.name =</span> <span class="st">"0"</span>, <span class="at">Boolean.operator =</span> <span class="st">"=="</span>, <span class="at">newobj =</span> <span class="st">"CNSIM.subset.Females"</span>,<span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;CNSIM.subset.Females&gt; has been created in all specified data sources"
@@ -990,7 +845,7 @@ $validity.check
 <section id="sub-setting-to-remove-nas" class="level3">
 <h3 class="anchored" data-anchor-id="sub-setting-to-remove-nas">Sub-setting to remove NAs</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.completeCases</span>(<span class="at">x1=</span><span class="st">"D"</span>,<span class="at">newobj=</span><span class="st">"D_without_NA"</span>, <span class="at">datasources=</span>connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.completeCases</span>(<span class="at">x1=</span><span class="st">"D"</span>,<span class="at">newobj=</span><span class="st">"D_without_NA"</span>, <span class="at">datasources=</span>connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;D_without_NA&gt; has been created in all specified data sources"
@@ -1004,12 +859,12 @@ $validity.check
 <h3 class="anchored" data-anchor-id="sub-setting-by-inequality">Sub-setting by inequality</h3>
 <p>Say we wanted to have a subset of patients where BMI values are ≥ 25, and call it subset.BMI.25.plus</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D"</span>,</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1.name =</span> <span class="st">"D$PM_BMI_CONTINUOUS"</span>,</span>
-<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2.name =</span> <span class="st">"25"</span>,</span>
-<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"&gt;="</span>,</span>
-<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"subset.BMI.25.plus"</span>,</span>
-<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D"</span>,</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1.name =</span> <span class="st">"D$PM_BMI_CONTINUOUS"</span>,</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2.name =</span> <span class="st">"25"</span>,</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"&gt;="</span>,</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"subset.BMI.25.plus"</span>,</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;subset.BMI.25.plus&gt; has been created in all specified data sources"
@@ -1020,7 +875,7 @@ $validity.check
 </div>
 <p>Checking we have successfully created such an object, using quantiles and histograms:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.quantileMean</span>(<span class="at">x=</span><span class="st">"subset.BMI.25.plus$PM_BMI_CONTINUOUS"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.quantileMean</span>(<span class="at">x=</span><span class="st">"subset.BMI.25.plus$PM_BMI_CONTINUOUS"</span>, <span class="at">type =</span> <span class="st">"split"</span>, <span class="at">datasources=</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
      5%     10%     25%     50%     75%     90%     95%    Mean 
@@ -1034,32 +889,23 @@ $study3
       5%      10%      25%      50%      75%      90%      95%     Mean 
 25.43000 25.96000 27.17000 29.32000 31.94000 34.35200 36.08100 29.86534 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="at">x=</span><span class="st">"subset.BMI.25.plus$PM_BMI_CONTINUOUS"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study1: 2 invalid cells</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study2: 1 invalid cells</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study3: 0 invalid cells</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="at">x=</span><span class="st">"subset.BMI.25.plus$PM_BMI_CONTINUOUS"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 $breaks
- [1] 24.53224 27.68450 30.83675 33.98901 37.14126 40.29352 43.44578 46.59803
- [9] 49.75029 52.90254 56.05480
+ [1] 24.41274 27.61750 30.82227 34.02703 37.23180 40.43656 43.64133 46.84609
+ [9] 50.05086 53.25562 56.46039
 
 $counts
- [1] 455 481 294 135  42  14   0   0   0   0
+ [1] 438 497 299 133  41  13   0   0   0   0
 
 $density
- [1] 0.101291997 0.107080111 0.065450213 0.030053669 0.009350030 0.003116677
+ [1] 0.095909813 0.108829172 0.065472681 0.029123299 0.008977859 0.002846638
  [7] 0.000000000 0.000000000 0.000000000 0.000000000
 
 $mids
- [1] 26.10837 29.26063 32.41288 35.56514 38.71739 41.86965 45.02190 48.17416
- [9] 51.32641 54.47867
+ [1] 26.01512 29.21988 32.42465 35.62941 38.83418 42.03894 45.24371 48.44847
+ [9] 51.65324 54.85800
 
 $xname
 [1] "xvect"
@@ -1072,19 +918,19 @@ attr(,"class")
 
 [[2]]
 $breaks
- [1] 24.53224 27.68450 30.83675 33.98901 37.14126 40.29352 43.44578 46.59803
- [9] 49.75029 52.90254 56.05480
+ [1] 24.41274 27.61750 30.82227 34.02703 37.23180 40.43656 43.64133 46.84609
+ [9] 50.05086 53.25562 56.46039
 
 $counts
- [1] 639 691 435 202  58  10   3   0   0   0
+ [1] 629 698 442 202  54  10   3   0   0   0
 
 $density
- [1] 0.0994173616 0.1075076633 0.0676784856 0.0314277106 0.0090237981
- [6] 0.0015558273 0.0004667482 0.0000000000 0.0000000000 0.0000000000
+ [1] 0.0962580854 0.1068173984 0.0676408168 0.0309127715 0.0082638102
+ [6] 0.0015303352 0.0004591006 0.0000000000 0.0000000000 0.0000000000
 
 $mids
- [1] 26.10837 29.26063 32.41288 35.56514 38.71739 41.86965 45.02190 48.17416
- [9] 51.32641 54.47867
+ [1] 26.01512 29.21988 32.42465 35.62941 38.83418 42.03894 45.24371 48.44847
+ [9] 51.65324 54.85800
 
 $xname
 [1] "xvect"
@@ -1097,19 +943,19 @@ attr(,"class")
 
 [[3]]
 $breaks
- [1] 24.53224 27.68450 30.83675 33.98901 37.14126 40.29352 43.44578 46.59803
- [9] 49.75029 52.90254 56.05480
+ [1] 24.41274 27.61750 30.82227 34.02703 37.23180 40.43656 43.64133 46.84609
+ [9] 50.05086 53.25562 56.46039
 
 $counts
- [1] 840 922 636 222  68  18   4   0   0   0
+ [1] 807 949 644 222  69  16   3   0   0   0
 
 $density
- [1] 0.0983305789 0.1079295164 0.0744502955 0.0259873673 0.0079600945
- [6] 0.0021070838 0.0004682409 0.0000000000 0.0000000000 0.0000000000
+ [1] 0.0929197523 0.1092699442 0.0741515743 0.0255615675 0.0079448115
+ [6] 0.0018422751 0.0003454266 0.0000000000 0.0000000000 0.0000000000
 
 $mids
- [1] 26.10837 29.26063 32.41288 35.56514 38.71739 41.86965 45.02190 48.17416
- [9] 51.32641 54.47867
+ [1] 26.01512 29.21988 32.42465 35.62941 38.83418 42.03894 45.24371 48.44847
+ [9] 51.65324 54.85800
 
 $xname
 [1] "xvect"
@@ -1133,13 +979,13 @@ attr(,"class")
 <h3 class="anchored" data-anchor-id="sub-setting-by-multiple-conditions">Sub-setting by multiple conditions</h3>
 <p>If we want to create a subset based on multiple conditions we can use the ds.Boole function before subsetting. For example, let’s say that we want to create a subset of individuals where BMI values are ≥ 25 and adjusted glucose is lower than 6.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.Boole</span>(</span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1 =</span> <span class="st">"D$PM_BMI_CONTINUOUS"</span>,</span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2 =</span> <span class="st">"25"</span>,</span>
-<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"&gt;="</span>,</span>
-<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric.output =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"BMI.25.plus"</span>,</span>
-<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.Boole</span>(</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1 =</span> <span class="st">"D$PM_BMI_CONTINUOUS"</span>,</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2 =</span> <span class="st">"25"</span>,</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"&gt;="</span>,</span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric.output =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"BMI.25.plus"</span>,</span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;BMI.25.plus&gt; has been created in all specified data sources"
@@ -1147,13 +993,13 @@ attr(,"class")
 $validity.check
 [1] "&lt;BMI.25.plus&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.Boole</span>(</span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1 =</span> <span class="st">"D$LAB_GLUC_ADJUSTED"</span>,</span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2 =</span> <span class="st">"6"</span>,</span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"&lt;"</span>,</span>
-<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric.output =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"GLUC.6.less"</span>,</span>
-<span id="cb90-7"><a href="#cb90-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.Boole</span>(</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1 =</span> <span class="st">"D$LAB_GLUC_ADJUSTED"</span>,</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2 =</span> <span class="st">"6"</span>,</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"&lt;"</span>,</span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric.output =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"GLUC.6.less"</span>,</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;GLUC.6.less&gt; has been created in all specified data sources"
@@ -1164,11 +1010,11 @@ $validity.check
 </div>
 <p>We can then use the ds.make function to make a new categorical variable which combines these groups:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>?ds.make </span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.make</span>(<span class="at">toAssign =</span> <span class="st">"BMI.25.plus+GLUC.6.less"</span>,</span>
-<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">newobj =</span> <span class="st">"BMI.25.plus_GLUC.6.less"</span>,</span>
-<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>?ds.make </span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.make</span>(<span class="at">toAssign =</span> <span class="st">"BMI.25.plus+GLUC.6.less"</span>,</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">newobj =</span> <span class="st">"BMI.25.plus_GLUC.6.less"</span>,</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;BMI.25.plus_GLUC.6.less&gt; has been created in all specified data sources"
@@ -1176,13 +1022,13 @@ $validity.check
 $validity.check
 [1] "&lt;BMI.25.plus_GLUC.6.less&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &gt;= 25 and glucose &lt; 6, then BMI.25.plus_GLUC.6.less=2</span></span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &gt;= 25 and glucose &gt;= 6, then BMI.25.plus_GLUC.6.less=1</span></span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &lt; 25 and glucose &lt; 6, then BMI.25.plus_GLUC.6.less=1</span></span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &lt; 25 and glucose &gt;= 6, then BMI.25.plus_GLUC.6.less=0</span></span>
-<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-6"><a href="#cb94-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.table</span>(<span class="at">rvar=</span> <span class="st">"BMI.25.plus_GLUC.6.less"</span>,</span>
-<span id="cb94-7"><a href="#cb94-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &gt;= 25 and glucose &lt; 6, then BMI.25.plus_GLUC.6.less=2</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &gt;= 25 and glucose &gt;= 6, then BMI.25.plus_GLUC.6.less=1</span></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &lt; 25 and glucose &lt; 6, then BMI.25.plus_GLUC.6.less=1</span></span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If BMI &lt; 25 and glucose &gt;= 6, then BMI.25.plus_GLUC.6.less=0</span></span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.table</span>(<span class="at">rvar=</span> <span class="st">"BMI.25.plus_GLUC.6.less"</span>,</span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
  Data in all studies were valid 
@@ -1231,7 +1077,7 @@ BMI.25.plus_GLUC.6.less
 $validity.message
 [1] "Data in all studies were valid"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrame</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"BMI.25.plus_GLUC.6.less"</span>), <span class="at">newobj =</span> <span class="st">"D2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrame</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"BMI.25.plus_GLUC.6.less"</span>), <span class="at">newobj =</span> <span class="st">"D2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;D2&gt; has been created in all specified data sources"
@@ -1239,7 +1085,7 @@ $validity.message
 $validity.check
 [1] "&lt;D2&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"D2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"D2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
  [1] "LAB_TSC"                 "LAB_TRIG"               
@@ -1268,12 +1114,12 @@ $study3
 [11] "PM_BMI_CATEGORICAL"      "LAB_HDL_sqrt"           
 [13] "LAB_HDL_log"             "BMI.25.plus_GLUC.6.less"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D2"</span>,</span>
-<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1.name =</span> <span class="st">"D2$BMI.25.plus_GLUC.6.less"</span>,</span>
-<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2.name =</span> <span class="st">"2"</span>,</span>
-<span id="cb101-4"><a href="#cb101-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"=="</span>,</span>
-<span id="cb101-5"><a href="#cb101-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"subset2"</span>,</span>
-<span id="cb101-6"><a href="#cb101-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dataFrameSubset</span>(<span class="at">df.name =</span> <span class="st">"D2"</span>,</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">V1.name =</span> <span class="st">"D2$BMI.25.plus_GLUC.6.less"</span>,</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">V2.name =</span> <span class="st">"2"</span>,</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Boolean.operator =</span> <span class="st">"=="</span>,</span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">newobj =</span> <span class="st">"subset2"</span>,</span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;subset2&gt; has been created in all specified data sources"
@@ -1281,7 +1127,7 @@ $study3
 $validity.check
 [1] "&lt;subset2&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dim</span>(<span class="st">"subset2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dim</span>(<span class="st">"subset2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`dimensions of subset2 in study1`
 [1] 550  14
@@ -1304,11 +1150,11 @@ $`dimensions of subset2 in combined studies`
 <section id="create-a-subset-of-columns-by-a-vector-of-column-names" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-subset-of-columns-by-a-vector-of-column-names">Create a subset of columns by a vector of column names</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dh.dropCols</span>(</span>
-<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> <span class="st">"D"</span>, </span>
-<span id="cb105-3"><a href="#cb105-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"PM_BMI_CONTINUOUS"</span>, <span class="st">"GENDER"</span>), </span>
-<span id="cb105-4"><a href="#cb105-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"keep"</span>,</span>
-<span id="cb105-5"><a href="#cb105-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_obj =</span> <span class="st">"df_subset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dh.dropCols</span>(</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> <span class="st">"D"</span>, </span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"PM_BMI_CONTINUOUS"</span>, <span class="st">"GENDER"</span>), </span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"keep"</span>,</span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_obj =</span> <span class="st">"df_subset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$is.object.created
@@ -1333,7 +1179,7 @@ $study3$is.object.created
 $study3$validity.check
 [1] "&lt;df_subset&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"df_subset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"df_subset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 [1] "PM_BMI_CONTINUOUS" "GENDER"           
@@ -1350,15 +1196,15 @@ $study3
 <h3 class="anchored" data-anchor-id="rename-variables">Rename variables</h3>
 <p><em>(Since we are doing this for demonstration purposes, we will keep the changes in a separate dataframe, so we will first create a copy of our original dataframe <code>"D"</code> with <code>ds.assign</code>)</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.assign</span>(<span class="at">toAssign =</span> <span class="st">"D"</span>, <span class="at">newobj =</span> <span class="st">"df_rename"</span>)</span>
-<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb109-3"><a href="#cb109-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, we rename its variables</span></span>
-<span id="cb109-4"><a href="#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dh.renameVars</span>(</span>
-<span id="cb109-5"><a href="#cb109-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> <span class="st">"df_rename"</span>, </span>
-<span id="cb109-6"><a href="#cb109-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">current_names =</span> <span class="fu">c</span>(<span class="st">"PM_BMI_CONTINUOUS"</span>, <span class="st">"GENDER"</span>),</span>
-<span id="cb109-7"><a href="#cb109-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_names =</span> <span class="fu">c</span>(<span class="st">"BMI"</span>, <span class="st">"SEX"</span>))</span>
-<span id="cb109-8"><a href="#cb109-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb109-9"><a href="#cb109-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"df_rename"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.assign</span>(<span class="at">toAssign =</span> <span class="st">"D"</span>, <span class="at">newobj =</span> <span class="st">"df_rename"</span>)</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, we rename its variables</span></span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dh.renameVars</span>(</span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> <span class="st">"df_rename"</span>, </span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">current_names =</span> <span class="fu">c</span>(<span class="st">"PM_BMI_CONTINUOUS"</span>, <span class="st">"GENDER"</span>),</span>
+<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_names =</span> <span class="fu">c</span>(<span class="st">"BMI"</span>, <span class="st">"SEX"</span>))</span>
+<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb89-9"><a href="#cb89-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.colnames</span>(<span class="st">"df_rename"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
  [1] "LAB_TSC"            "LAB_TRIG"           "LAB_HDL"           
@@ -1396,33 +1242,24 @@ $study3
 <p>Firstly, histograms give a good sense of how one variable is distributed. But no individual points are disclosed because values are “binned” into groups of a similar magnitude, disguising what each one actually is. We protect privacy by removing bins with low counts (below specific threshold). If you have a symmetric distribution, you may find some things aren’t observed at the extreme ends.</p>
 <p>Let’s create a histogram of the variable we’ve been investigating for much of this study: HDL Cholesterol (“LAB_HDL”).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>?ds.histogram</span>
-<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study1: 1 invalid cells</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study2: 1 invalid cells</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study3: 1 invalid cells</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>?ds.histogram</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="at">x=</span><span class="st">'D$LAB_HDL'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 $breaks
- [1] -0.5076287 -0.1440722  0.2194844  0.5830410  0.9465975  1.3101541
- [7]  1.6737106  2.0372672  2.4008238  2.7643803  3.1279369
+ [1] -0.5052983 -0.1397116  0.2258752  0.5914620  0.9570487  1.3226355
+ [7]  1.6882223  2.0538090  2.4193958  2.7849826  3.1505693
 
 $counts
- [1]   0   4  26  93 337 594 528 192  27   0
+ [1]   0   4  27 101 340 606 519 180  24   0
 
 $density
- [1] 0.000000000 0.006102282 0.039664833 0.141878057 0.514117262 0.906188883
- [7] 0.805501229 0.292909538 0.041190404 0.000000000
+ [1] 0.000000000 0.006068394 0.040961662 0.153226957 0.515813519 0.919361743
+ [7] 0.787374166 0.273077745 0.036410366 0.000000000
 
 $mids
- [1] -0.32585046  0.03770611  0.40126267  0.76481923  1.12837579  1.49193236
- [7]  1.85548892  2.21904548  2.58260204  2.94615861
+ [1] -0.32250496  0.04308181  0.40866858  0.77425535  1.13984212  1.50542889
+ [7]  1.87101566  2.23660243  2.60218919  2.96777596
 
 $xname
 [1] "xvect"
@@ -1435,19 +1272,19 @@ attr(,"class")
 
 [[2]]
 $breaks
- [1] -0.5076287 -0.1440722  0.2194844  0.5830410  0.9465975  1.3101541
- [7]  1.6737106  2.0372672  2.4008238  2.7643803  3.1279369
+ [1] -0.5052983 -0.1397116  0.2258752  0.5914620  0.9570487  1.3226355
+ [7]  1.6882223  2.0538090  2.4193958  2.7849826  3.1505693
 
 $counts
- [1]   0   8  29 134 504 845 707 253  48   4
+ [1]   0   8  30 141 518 857 695 237  42   4
 
 $density
- [1] 0.00000000 0.00868726 0.03149132 0.14551160 0.54729737 0.91759181
- [7] 0.76773658 0.27473459 0.05212356 0.00434363
+ [1] 0.000000000 0.008639017 0.032396314 0.152262674 0.559376349 0.925454693
+ [7] 0.750514600 0.255930878 0.045354839 0.004319508
 
 $mids
- [1] -0.32585046  0.03770611  0.40126267  0.76481923  1.12837579  1.49193236
- [7]  1.85548892  2.21904548  2.58260204  2.94615861
+ [1] -0.32250496  0.04308181  0.40866858  0.77425535  1.13984212  1.50542889
+ [7]  1.87101566  2.23660243  2.60218919  2.96777596
 
 $xname
 [1] "xvect"
@@ -1460,19 +1297,19 @@ attr(,"class")
 
 [[3]]
 $breaks
- [1] -0.5076287 -0.1440722  0.2194844  0.5830410  0.9465975  1.3101541
- [7]  1.6737106  2.0372672  2.4008238  2.7643803  3.1279369
+ [1] -0.5052983 -0.1397116  0.2258752  0.5914620  0.9570487  1.3226355
+ [7]  1.6882223  2.0538090  2.4193958  2.7849826  3.1505693
 
 $counts
- [1]    3   11   46  167  657 1131 1004  395   57    0
+ [1]    3   11   47  177  682 1136  987  375   53    0
 
 $density
- [1] 0.002375989 0.008711961 0.036431836 0.132263405 0.520341660 0.895747971
- [7] 0.795164424 0.312838593 0.045143797 0.000000000
+ [1] 0.002362795 0.008663581 0.037017118 0.139404892 0.537142012 0.894711621
+ [7] 0.777359481 0.295349347 0.041742708 0.000000000
 
 $mids
- [1] -0.32585046  0.03770611  0.40126267  0.76481923  1.12837579  1.49193236
- [7]  1.85548892  2.21904548  2.58260204  2.94615861
+ [1] -0.32250496  0.04308181  0.40866858  0.77425535  1.13984212  1.50542889
+ [7]  1.87101566  2.23660243  2.60218919  2.96777596
 
 $xname
 [1] "xvect"
@@ -1497,7 +1334,7 @@ attr(,"class")
 <h3 class="anchored" data-anchor-id="scatterplots-of-two-numerical-variables">Scatterplots of two numerical variables</h3>
 <p>When you generate a scatter plot, you can say that the data points that are displayed are not the actual values. The function gives you the choice on how to anonymise: either you anonymise the values by additional random noise; or you take the average of the k nearest neighbours. (for more details on how anonymisation methods are used for the generation of privacy-preserving visualisations you can have a look on the paper https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-020-00257-4)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.scatterPlot</span>(<span class="at">x=</span><span class="st">"D$LAB_HDL"</span>, <span class="at">y=</span><span class="st">"D$PM_BMI_CONTINUOUS"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.scatterPlot</span>(<span class="at">x=</span><span class="st">"D$LAB_HDL"</span>, <span class="at">y=</span><span class="st">"D$PM_BMI_CONTINUOUS"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Split plot created"</code></pre>
 </div>
@@ -1511,9 +1348,9 @@ attr(,"class")
 </div>
 <p>Other DataSHIELD graphical functions allow the creation of box plots, heatmap plots and contour plots. Investigate them using their help functions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>?ds.heatmapPlot</span>
-<span id="cb118-2"><a href="#cb118-2" aria-hidden="true" tabindex="-1"></a>?ds.contourPlot</span>
-<span id="cb118-3"><a href="#cb118-3" aria-hidden="true" tabindex="-1"></a>?ds.boxPlot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>?ds.heatmapPlot</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>?ds.contourPlot</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>?ds.boxPlot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="section-3" class="level80">
 <p class="heading"></p>
@@ -1526,7 +1363,7 @@ attr(,"class")
 <h3 class="anchored" data-anchor-id="simple-linear-regression">Simple Linear Regression</h3>
 <p>We want to examine the relationship between BMI and HDL Cholesterol</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.cor</span>(<span class="at">x=</span><span class="st">'D$PM_BMI_CONTINUOUS'</span>, <span class="at">y=</span><span class="st">'D$LAB_HDL'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.cor</span>(<span class="at">x=</span><span class="st">'D$PM_BMI_CONTINUOUS'</span>, <span class="at">y=</span><span class="st">'D$LAB_HDL'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$`Number of missing values in each variable`
@@ -1595,60 +1432,7 @@ y.val  3321  3321</code></pre>
 <p>The method for this (ds.glm) is a “pooled analysis”- equivalent to placing the individual-level data from all sources in one warehouse.</p>
 <p>Important to note that the link function is by default the canonical link function for each family. So binomial &lt;-&gt; logistic link, poisson &lt;-&gt; log link, gaussian &lt;-&gt; identity link.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.glm</span>(<span class="at">formula =</span> <span class="st">"D$LAB_HDL~D$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">"gaussian"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 1...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      19765.404445561</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 2...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1297.45709088487</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 3...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1297.45709088487</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>SUMMARY OF MODEL STATE after iteration 3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Current deviance 1297.45709088487 on 7483 degrees of freedom</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Convergence criterion TRUE (0)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-beta: 1.90261171060757 -0.0121577380319686</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Information matrix overall:</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>                    (Intercept) D$PM_BMI_CONTINUOUS
-(Intercept)              7485.0            204970.6
-D$PM_BMI_CONTINUOUS    204970.6           5786443.7</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Score vector overall:</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>                            [,1]
-(Intercept)         3.620215e-12
-D$PM_BMI_CONTINUOUS 8.333245e-11</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Current deviance: 1297.45709088487</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.glm</span>(<span class="at">formula =</span> <span class="st">"D$LAB_HDL~D$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">"gaussian"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Nvalid
 [1] 7485
@@ -1706,7 +1490,7 @@ $output.information
 </div>
 <p>Regress HDL Cholesterol with BMI using the Study-Level Meta-Analysis (SLMA) approach:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.glmSLMA</span>(<span class="at">formula =</span> <span class="st">"D$LAB_HDL~D$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">"gaussian"</span>, <span class="at">newobj =</span> <span class="st">"workshop.obj"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.glmSLMA</span>(<span class="at">formula =</span> <span class="st">"D$LAB_HDL~D$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">"gaussian"</span>, <span class="at">newobj =</span> <span class="st">"workshop.obj"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$output.summary
 $output.summary$study1
@@ -2138,7 +1922,7 @@ $validity.check
 </div>
 <p>For the SLMA approach we can assign the predicted values at each study:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.glmPredict</span>(<span class="at">glmname =</span> <span class="st">"workshop.obj"</span>, <span class="at">newobj =</span> <span class="st">"workshop.prediction.obj"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.glmPredict</span>(<span class="at">glmname =</span> <span class="st">"workshop.obj"</span>, <span class="at">newobj =</span> <span class="st">"workshop.prediction.obj"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$safe.list
@@ -2243,7 +2027,7 @@ $study3$safe.list$fit.quantiles
       5%      10%      25%      50%      75%      90%      95% 
 1.477918 1.499540 1.535707 1.576635 1.618592 1.654372 1.679084 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.length</span>(<span class="st">"workshop.prediction.obj$fit"</span>, <span class="at">datasources=</span>connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.length</span>(<span class="st">"workshop.prediction.obj$fit"</span>, <span class="at">datasources=</span>connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`length of workshop.prediction.obj$fit in study1`
 [1] 1732
@@ -2257,7 +2041,7 @@ $`length of workshop.prediction.obj$fit in study3`
 $`total length of workshop.prediction.obj$fit in all studies combined`
 [1] 7485</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.length</span>(<span class="st">"D$LAB_HDL"</span>, <span class="at">datasources=</span>connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.length</span>(<span class="st">"D$LAB_HDL"</span>, <span class="at">datasources=</span>connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`length of D$LAB_HDL in study1`
 [1] 2163
@@ -2273,7 +2057,7 @@ $`total length of D$LAB_HDL in all studies combined`
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.cbind</span>(<span class="fu">c</span>(<span class="st">'D$LAB_HDL'</span>, <span class="st">'D$PM_BMI_CONTINUOUS'</span>), <span class="at">newobj=</span><span class="st">'vars'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.cbind</span>(<span class="fu">c</span>(<span class="st">'D$LAB_HDL'</span>, <span class="st">'D$PM_BMI_CONTINUOUS'</span>), <span class="at">newobj=</span><span class="st">'vars'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;vars&gt; has been created in all specified data sources"
@@ -2281,7 +2065,7 @@ $`total length of D$LAB_HDL in all studies combined`
 $validity.check
 [1] "&lt;vars&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.completeCases</span>(<span class="st">'vars'</span>, <span class="at">newobj=</span><span class="st">'vars.complete'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.completeCases</span>(<span class="st">'vars'</span>, <span class="at">newobj=</span><span class="st">'vars.complete'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;vars.complete&gt; has been created in all specified data sources"
@@ -2289,7 +2073,7 @@ $validity.check
 $validity.check
 [1] "&lt;vars.complete&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb150"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dim</span>(<span class="st">'vars.complete'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.dim</span>(<span class="st">'vars.complete'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`dimensions of vars.complete in study1`
 [1] 1732    2
@@ -2306,8 +2090,8 @@ $`dimensions of vars.complete in combined studies`
 </div>
 <p>Let’s plot the best linear fit on a scatter plot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">ds.scatterPlot</span>(<span class="st">'D$PM_BMI_CONTINUOUS'</span>, <span class="st">"D$LAB_HDL"</span>, <span class="at">datasources =</span> connections, <span class="at">return.coords =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb152-2"><a href="#cb152-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">ds.scatterPlot</span>(<span class="st">'vars.complete$PM_BMI_CONTINUOUS'</span>, <span class="st">"workshop.prediction.obj$fit"</span>, <span class="at">datasources =</span> connections, <span class="at">return.coords =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">ds.scatterPlot</span>(<span class="st">'D$PM_BMI_CONTINUOUS'</span>, <span class="st">"D$LAB_HDL"</span>, <span class="at">datasources =</span> connections, <span class="at">return.coords =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">ds.scatterPlot</span>(<span class="st">'vars.complete$PM_BMI_CONTINUOUS'</span>, <span class="st">"workshop.prediction.obj$fit"</span>, <span class="at">datasources =</span> connections, <span class="at">return.coords =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2315,8 +2099,8 @@ $`dimensions of vars.complete in combined studies`
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb153"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb153-1"><a href="#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="co"># then in native R</span></span>
-<span id="cb153-2"><a href="#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co"># then in native R</span></span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2324,12 +2108,12 @@ $`dimensions of vars.complete in combined studies`
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">'Body Mass Index'</span>, <span class="at">ylab=</span><span class="st">'HDL Cholesterol'</span>, <span class="at">main=</span><span class="st">'Study 1'</span>)</span>
-<span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>y, <span class="at">col=</span><span class="st">'red'</span>)</span>
-<span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">'Body Mass Index'</span>, <span class="at">ylab=</span><span class="st">'HDL Cholesterol'</span>, <span class="at">main=</span><span class="st">'Study 2'</span>)</span>
-<span id="cb154-4"><a href="#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>y, <span class="at">col=</span><span class="st">'red'</span>)</span>
-<span id="cb154-5"><a href="#cb154-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">'Body Mass Index'</span>, <span class="at">ylab=</span><span class="st">'HDL Cholesterol'</span>, <span class="at">main=</span><span class="st">'Study 3'</span>)</span>
-<span id="cb154-6"><a href="#cb154-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>y, <span class="at">col=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">'Body Mass Index'</span>, <span class="at">ylab=</span><span class="st">'HDL Cholesterol'</span>, <span class="at">main=</span><span class="st">'Study 1'</span>)</span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">1</span>]])<span class="sc">$</span>y, <span class="at">col=</span><span class="st">'red'</span>)</span>
+<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">'Body Mass Index'</span>, <span class="at">ylab=</span><span class="st">'HDL Cholesterol'</span>, <span class="at">main=</span><span class="st">'Study 2'</span>)</span>
+<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">2</span>]])<span class="sc">$</span>y, <span class="at">col=</span><span class="st">'red'</span>)</span>
+<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df1[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">'Body Mass Index'</span>, <span class="at">ylab=</span><span class="st">'HDL Cholesterol'</span>, <span class="at">main=</span><span class="st">'Study 3'</span>)</span>
+<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>x,<span class="fu">as.data.frame</span>(df2[[<span class="dv">1</span>]][[<span class="dv">3</span>]])<span class="sc">$</span>y, <span class="at">col=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2340,10 +2124,10 @@ $`dimensions of vars.complete in combined studies`
 </div>
 <p>For the SLMA approach we can also create the predicted values and the residuals at each study using the ds.make function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb155"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb155-1"><a href="#cb155-1" aria-hidden="true" tabindex="-1"></a>glmslma <span class="ot">&lt;-</span> <span class="fu">ds.glmSLMA</span>(<span class="at">formula =</span> <span class="st">"vars.complete$LAB_HDL~vars.complete$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">"gaussian"</span>, <span class="at">newobj =</span> <span class="st">"workshop.obj"</span>, <span class="at">datasources =</span> connections)</span>
-<span id="cb155-2"><a href="#cb155-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb155-3"><a href="#cb155-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.make</span>(<span class="at">toAssign=</span><span class="fu">paste0</span>(<span class="st">"("</span>,glmslma<span class="sc">$</span>SLMA.pooled.ests.matrix[<span class="dv">1</span>,<span class="dv">1</span>],<span class="st">")+("</span>, glmslma<span class="sc">$</span>SLMA.pooled.ests.matrix[<span class="dv">2</span>,<span class="dv">1</span>],<span class="st">"*vars.complete$PM_BMI_CONTINUOUS)"</span>), </span>
-<span id="cb155-4"><a href="#cb155-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">newobj =</span> <span class="st">"predicted.values"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>glmslma <span class="ot">&lt;-</span> <span class="fu">ds.glmSLMA</span>(<span class="at">formula =</span> <span class="st">"vars.complete$LAB_HDL~vars.complete$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">"gaussian"</span>, <span class="at">newobj =</span> <span class="st">"workshop.obj"</span>, <span class="at">datasources =</span> connections)</span>
+<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.make</span>(<span class="at">toAssign=</span><span class="fu">paste0</span>(<span class="st">"("</span>,glmslma<span class="sc">$</span>SLMA.pooled.ests.matrix[<span class="dv">1</span>,<span class="dv">1</span>],<span class="st">")+("</span>, glmslma<span class="sc">$</span>SLMA.pooled.ests.matrix[<span class="dv">2</span>,<span class="dv">1</span>],<span class="st">"*vars.complete$PM_BMI_CONTINUOUS)"</span>), </span>
+<span id="cb117-4"><a href="#cb117-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">newobj =</span> <span class="st">"predicted.values"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;predicted.values&gt; has been created in all specified data sources"
@@ -2351,8 +2135,8 @@ $`dimensions of vars.complete in combined studies`
 $validity.check
 [1] "&lt;predicted.values&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb157"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.make</span>(<span class="at">toAssign =</span> <span class="st">"vars.complete$LAB_HDL - predicted.values"</span>, </span>
-<span id="cb157-2"><a href="#cb157-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">newobj =</span> <span class="st">"residuals"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.make</span>(<span class="at">toAssign =</span> <span class="st">"vars.complete$LAB_HDL - predicted.values"</span>, </span>
+<span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">newobj =</span> <span class="st">"residuals"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$is.object.created
 [1] "A data object &lt;residuals&gt; has been created in all specified data sources"
@@ -2360,12 +2144,12 @@ $validity.check
 $validity.check
 [1] "&lt;residuals&gt; appears valid in all sources"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb159"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="co"># and you can use those to run regression plot diagnostics  </span></span>
-<span id="cb159-2"><a href="#cb159-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.scatterPlot</span>(<span class="st">'predicted.values'</span>, <span class="st">"residuals"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="co"># and you can use those to run regression plot diagnostics  </span></span>
+<span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.scatterPlot</span>(<span class="st">'predicted.values'</span>, <span class="st">"residuals"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Split plot created"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb161"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="st">"residuals"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.histogram</span>(<span class="st">"residuals"</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2373,32 +2157,22 @@ $validity.check
 </figure>
 </div>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study1: 1 invalid cells</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study2: 0 invalid cells</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: study3: 1 invalid cells</code></pre>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 $breaks
- [1] -2.137653016 -1.780801502 -1.423949988 -1.067098474 -0.710246960
- [6] -0.353395446  0.003456068  0.360307581  0.717159095  1.074010609
-[11]  1.430862123
+ [1] -2.12783960 -1.77093411 -1.41402863 -1.05712314 -0.70021766 -0.34331217
+ [7]  0.01359331  0.37049880  0.72740428  1.08430977  1.44121525
 
 $counts
- [1]   0   0  15  63 247 516 570 256  59   5
+ [1]   0   0  17  65 247 527 564 250  55   5
 
 $density
- [1] 0.00000000 0.00000000 0.02426922 0.10193073 0.39963316 0.83486119
- [7] 0.92223038 0.41419470 0.09545893 0.00808974
+ [1] 0.000000000 0.000000000 0.027500957 0.105150719 0.399572732 0.852529676
+ [7] 0.912384700 0.404425842 0.088973685 0.008088517
 
 $mids
- [1] -1.9592273 -1.6023757 -1.2455242 -0.8886727 -0.5318212 -0.1749697
- [7]  0.1818818  0.5387333  0.8955849  1.2524364
+ [1] -1.9493869 -1.5924814 -1.2355759 -0.8786704 -0.5217649 -0.1648594
+ [7]  0.1920461  0.5489515  0.9058570  1.2627625
 
 $xname
 [1] "xvect"
@@ -2411,20 +2185,19 @@ attr(,"class")
 
 [[2]]
 $breaks
- [1] -2.137653016 -1.780801502 -1.423949988 -1.067098474 -0.710246960
- [6] -0.353395446  0.003456068  0.360307581  0.717159095  1.074010609
-[11]  1.430862123
+ [1] -2.12783960 -1.77093411 -1.41402863 -1.05712314 -0.70021766 -0.34331217
+ [7]  0.01359331  0.37049880  0.72740428  1.08430977  1.44121525
 
 $counts
- [1]   0   5  17  96 364 751 752 353  84  10
+ [1]   0   5  17 102 368 771 741 345  74   9
 
 $density
- [1] 0.000000000 0.005761279 0.019588348 0.110616552 0.419421095 0.865344072
- [7] 0.866496328 0.406746281 0.096789483 0.011522558
+ [1] 0.000000000 0.005760408 0.019585386 0.117512314 0.423965996 0.888254845
+ [7] 0.853692400 0.397468121 0.085254032 0.010368734
 
 $mids
- [1] -1.9592273 -1.6023757 -1.2455242 -0.8886727 -0.5318212 -0.1749697
- [7]  0.1818818  0.5387333  0.8955849  1.2524364
+ [1] -1.9493869 -1.5924814 -1.2355759 -0.8786704 -0.5217649 -0.1648594
+ [7]  0.1920461  0.5489515  0.9058570  1.2627625
 
 $xname
 [1] "xvect"
@@ -2437,20 +2210,19 @@ attr(,"class")
 
 [[3]]
 $breaks
- [1] -2.137653016 -1.780801502 -1.423949988 -1.067098474 -0.710246960
- [6] -0.353395446  0.003456068  0.360307581  0.717159095  1.074010609
-[11]  1.430862123
+ [1] -2.12783960 -1.77093411 -1.41402863 -1.05712314 -0.70021766 -0.34331217
+ [7]  0.01359331  0.37049880  0.72740428  1.08430977  1.44121525
 
 $counts
- [1]    0    7   29  106  488  975 1068  518  121    8
+ [1]    0    7   29  115  496  984 1062  504  115    8
 
 $density
- [1] 0.000000000 0.005906655 0.024470429 0.089443636 0.411778249 0.822712691
- [7] 0.901186824 0.437092486 0.102100754 0.006750463
+ [1] 0.000000000 0.005905762 0.024466728 0.097023233 0.418465423 0.830181403
+ [7] 0.895988466 0.425214865 0.097023233 0.006749442
 
 $mids
- [1] -1.9592273 -1.6023757 -1.2455242 -0.8886727 -0.5318212 -0.1749697
- [7]  0.1818818  0.5387333  0.8955849  1.2524364
+ [1] -1.9493869 -1.5924814 -1.2355759 -0.8786704 -0.5217649 -0.1648594
+ [7]  0.1920461  0.5489515  0.9058570  1.2627625
 
 $xname
 [1] "xvect"
@@ -2475,7 +2247,7 @@ attr(,"class")
 <p>We want to examine the relationship between BMI and diabetes</p>
 <p>Examine the distribution of the variable “DIS_DIAB” in all cohorts using ‘ds.table’:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb166"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.table</span>(<span class="st">"D$DIS_DIAB"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.table</span>(<span class="st">"D$DIS_DIAB"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
  Data in all studies were valid 
@@ -2524,7 +2296,7 @@ $validity.message
 </div>
 <p>Check the class of “DIS_DIAB”:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb169"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a href="#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.class</span>(<span class="st">"D$DIS_DIAB"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.class</span>(<span class="st">"D$DIS_DIAB"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 [1] "factor"
@@ -2538,20 +2310,20 @@ $study3
 </div>
 <p>Examine the association between BMI and diabetes:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb171"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb171-1"><a href="#cb171-1" aria-hidden="true" tabindex="-1"></a>glmSLMA_mod2<span class="ot">&lt;-</span><span class="fu">ds.glmSLMA</span>(<span class="at">formula=</span><span class="st">"D$DIS_DIAB~D$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">'binomial'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a>glmSLMA_mod2<span class="ot">&lt;-</span><span class="fu">ds.glmSLMA</span>(<span class="at">formula=</span><span class="st">"D$DIS_DIAB~D$PM_BMI_CONTINUOUS"</span>, <span class="at">family=</span><span class="st">'binomial'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Save effect estimates and standard errors as new objects</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb172"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a>estimates <span class="ot">&lt;-</span> <span class="fu">c</span>(glmSLMA_mod2<span class="sc">$</span>betamatrix.valid[<span class="dv">2</span>,])</span>
-<span id="cb172-2"><a href="#cb172-2" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="fu">c</span>(glmSLMA_mod2<span class="sc">$</span>sematrix.valid[<span class="dv">2</span>,])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a>estimates <span class="ot">&lt;-</span> <span class="fu">c</span>(glmSLMA_mod2<span class="sc">$</span>betamatrix.valid[<span class="dv">2</span>,])</span>
+<span id="cb131-2"><a href="#cb131-2" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="fu">c</span>(glmSLMA_mod2<span class="sc">$</span>sematrix.valid[<span class="dv">2</span>,])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Meta-analyse the results using rma to obtain study weights:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb173"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb173-1"><a href="#cb173-1" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">rma</span>(estimates, <span class="at">sei=</span>se)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">rma</span>(estimates, <span class="at">sei=</span>se)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Can produce simple forest plots using output:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb174"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb174-1"><a href="#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(res, <span class="at">atransf=</span>exp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(res, <span class="at">atransf=</span>exp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2562,14 +2334,14 @@ $study3
 </div>
 <p>We can also add more information to forest plots:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb175"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a href="#cb175-1" aria-hidden="true" tabindex="-1"></a>study_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"study 1"</span>, <span class="st">"study 2"</span>, <span class="st">"study 3"</span>)</span>
-<span id="cb175-2"><a href="#cb175-2" aria-hidden="true" tabindex="-1"></a>weights <span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="fu">paste0</span>(<span class="fu">formatC</span>(<span class="fu">weights</span>(res), <span class="at">format=</span><span class="st">"f"</span>, <span class="at">digits=</span><span class="dv">1</span>, <span class="at">width=</span><span class="dv">4</span>), <span class="st">"%"</span>))</span>
-<span id="cb175-3"><a href="#cb175-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb175-4"><a href="#cb175-4" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(res, <span class="at">atransf=</span>exp,</span>
-<span id="cb175-5"><a href="#cb175-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab=</span><span class="st">"Crude Odds Ratio"</span>, <span class="at">refline=</span><span class="fu">log</span>(<span class="dv">1</span>), <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>,<span class="fl">0.5</span>), <span class="at">at=</span><span class="fu">log</span>(<span class="fu">c</span>(<span class="fl">0.95</span>, <span class="dv">1</span>, <span class="fl">1.1</span>, <span class="fl">1.2</span>, <span class="fl">1.3</span>)),</span>
-<span id="cb175-6"><a href="#cb175-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">slab=</span><span class="fu">cbind</span>(<span class="fu">paste0</span>(study_names, <span class="st">" ("</span>, <span class="fu">paste0</span>(weights, <span class="st">")"</span>))), <span class="at">mlab=</span><span class="st">"RE model"</span>)</span>
-<span id="cb175-7"><a href="#cb175-7" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.5</span>, <span class="fl">4.5</span>, <span class="at">pos=</span><span class="dv">2</span>, <span class="st">"Odds Ratio [95% CI]"</span>)</span>
-<span id="cb175-8"><a href="#cb175-8" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="fl">4.5</span>, <span class="at">pos=</span><span class="dv">4</span>, <span class="st">"Study (weight)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>study_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"study 1"</span>, <span class="st">"study 2"</span>, <span class="st">"study 3"</span>)</span>
+<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a>weights <span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="fu">paste0</span>(<span class="fu">formatC</span>(<span class="fu">weights</span>(res), <span class="at">format=</span><span class="st">"f"</span>, <span class="at">digits=</span><span class="dv">1</span>, <span class="at">width=</span><span class="dv">4</span>), <span class="st">"%"</span>))</span>
+<span id="cb134-3"><a href="#cb134-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb134-4"><a href="#cb134-4" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(res, <span class="at">atransf=</span>exp,</span>
+<span id="cb134-5"><a href="#cb134-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab=</span><span class="st">"Crude Odds Ratio"</span>, <span class="at">refline=</span><span class="fu">log</span>(<span class="dv">1</span>), <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>,<span class="fl">0.5</span>), <span class="at">at=</span><span class="fu">log</span>(<span class="fu">c</span>(<span class="fl">0.95</span>, <span class="dv">1</span>, <span class="fl">1.1</span>, <span class="fl">1.2</span>, <span class="fl">1.3</span>)),</span>
+<span id="cb134-6"><a href="#cb134-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">slab=</span><span class="fu">cbind</span>(<span class="fu">paste0</span>(study_names, <span class="st">" ("</span>, <span class="fu">paste0</span>(weights, <span class="st">")"</span>))), <span class="at">mlab=</span><span class="st">"RE model"</span>)</span>
+<span id="cb134-7"><a href="#cb134-7" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.5</span>, <span class="fl">4.5</span>, <span class="at">pos=</span><span class="dv">2</span>, <span class="st">"Odds Ratio [95% CI]"</span>)</span>
+<span id="cb134-8"><a href="#cb134-8" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="fl">4.5</span>, <span class="at">pos=</span><span class="dv">4</span>, <span class="st">"Study (weight)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2583,117 +2355,16 @@ $study3
 <h3 class="anchored" data-anchor-id="modelling-multiple-variables-and-interactions">Modelling multiple variables and interactions</h3>
 <p>Also possible to model multiple explanatory variables and include interactions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb176"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a>glm_mod1<span class="ot">&lt;-</span><span class="fu">ds.glm</span>(<span class="at">formula=</span><span class="st">"D$DIS_DIAB~D$PM_BMI_CONTINUOUS+D$LAB_HDL*D$GENDER"</span>, <span class="at">family=</span><span class="st">'binomial'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 1...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      10376.4132929824</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 2...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      2404.18978205835</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 3...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1357.74614354854</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 4...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1095.98897339272</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 5...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1040.08118737452</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 6...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1033.57954875967</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 7...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1033.4312300543</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 8...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1033.43112377231</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Iteration 9...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>CURRENT DEVIANCE:      1033.43112377224</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>SUMMARY OF MODEL STATE after iteration 9</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Current deviance 1033.43112377224 on 7480 degrees of freedom</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Convergence criterion TRUE (6.2259131505956e-14)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-beta: -6.42274546317614 0.129428314189867 -0.99120070335343 -1.56103433048665 0.797170506403169</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Information matrix overall:</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>                    (Intercept) D$PM_BMI_CONTINUOUS  D$LAB_HDL  D$GENDER1
-(Intercept)           101.99761            3121.043  140.68963   34.51419
-D$PM_BMI_CONTINUOUS  3121.04300           97856.576 4265.77262 1022.78959
-D$LAB_HDL             140.68963            4265.773  217.08906   54.66413
-D$GENDER1              34.51419            1022.790   54.66413   34.51419
-D$LAB_HDL:D$GENDER1    54.66413            1614.821   92.09369   54.66413
-                    D$LAB_HDL:D$GENDER1
-(Intercept)                    54.66413
-D$PM_BMI_CONTINUOUS          1614.82140
-D$LAB_HDL                      92.09369
-D$GENDER1                      54.66413
-D$LAB_HDL:D$GENDER1            92.09369</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Score vector overall:</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>                             [,1]
-(Intercept)         -3.006395e-11
-D$PM_BMI_CONTINUOUS -7.926246e-10
-D$LAB_HDL           -5.252776e-11
-D$GENDER1           -2.325873e-11
-D$LAB_HDL:D$GENDER1 -4.320544e-11</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Current deviance: 1033.43112377224</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb135"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a>glm_mod1<span class="ot">&lt;-</span><span class="fu">ds.glm</span>(<span class="at">formula=</span><span class="st">"D$DIS_DIAB~D$PM_BMI_CONTINUOUS+D$LAB_HDL*D$GENDER"</span>, <span class="at">family=</span><span class="st">'binomial'</span>, <span class="at">datasources =</span> connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The “*” between LAB_HDL and GENDER means fit all possible main effects and interactions between the two covariates.</p>
 <p>Compare with results of a study-level meta analysis:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb204"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb204-1"><a href="#cb204-1" aria-hidden="true" tabindex="-1"></a>glmSLMA_mod2<span class="ot">&lt;-</span><span class="fu">ds.glmSLMA</span>(<span class="at">formula=</span><span class="st">"D$DIS_DIAB~D$PM_BMI_CONTINUOUS+D$LAB_HDL*D$GENDER"</span>, <span class="at">family=</span><span class="st">'binomial'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a>glmSLMA_mod2<span class="ot">&lt;-</span><span class="fu">ds.glmSLMA</span>(<span class="at">formula=</span><span class="st">"D$DIS_DIAB~D$PM_BMI_CONTINUOUS+D$LAB_HDL*D$GENDER"</span>, <span class="at">family=</span><span class="st">'binomial'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now compare outputs:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb205"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb205-1"><a href="#cb205-1" aria-hidden="true" tabindex="-1"></a>glm_mod1<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a>glm_mod1<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                      Estimate Std. Error   z-value      p-value low0.95CI.LP
 (Intercept)         -6.4227455 0.77703028 -8.265760 1.388081e-16  -7.94569683
@@ -2708,7 +2379,7 @@ D$LAB_HDL             -0.48659119 0.371130805   0.2240669893     0.614718282
 D$GENDER1             -0.03492239 0.209918833   0.0456319902     0.965680359
 D$LAB_HDL:D$GENDER1    1.77064918 2.219252675   0.8383595883     5.874665842</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb207"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb207-1"><a href="#cb207-1" aria-hidden="true" tabindex="-1"></a>glmSLMA_mod2<span class="sc">$</span>SLMA.pooled.ests.matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb139"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a>glmSLMA_mod2<span class="sc">$</span>SLMA.pooled.ests.matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                     pooled.ML      se.ML pooled.REML    se.REML  pooled.FE
 (Intercept)         -6.4534338 0.78157668  -6.4534338 0.78157668 -6.4534338
@@ -2731,30 +2402,16 @@ D$LAB_HDL:D$GENDER1 0.49963906</code></pre>
 <h2 class="anchored" data-anchor-id="at-the-end-of-your-rstudio-server-analysis">At the end of your RStudio Server analysis:</h2>
 <p>You can save your workspace:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb209"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb209-1"><a href="#cb209-1" aria-hidden="true" tabindex="-1"></a>DSI<span class="sc">::</span><span class="fu">datashield.workspace_save</span>(<span class="at">conns =</span> connections, <span class="at">ws =</span> <span class="st">"workspace2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb141"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a>DSI<span class="sc">::</span><span class="fu">datashield.workspace_save</span>(<span class="at">conns =</span> connections, <span class="at">ws =</span> <span class="st">"workspace2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Don’t forget to log out! Using:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb210"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb210-1"><a href="#cb210-1" aria-hidden="true" tabindex="-1"></a>DSI<span class="sc">::</span><span class="fu">datashield.logout</span>(connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a>DSI<span class="sc">::</span><span class="fu">datashield.logout</span>(connections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can restore your workspace, the next time you want to continue with your analysis</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb211"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb211-1"><a href="#cb211-1" aria-hidden="true" tabindex="-1"></a>connections <span class="ot">&lt;-</span> <span class="fu">datashield.login</span>(<span class="at">logins =</span> logindata, <span class="at">assign =</span> <span class="cn">TRUE</span>, <span class="at">symbol =</span> <span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Logging into the collaborating servers</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-  No variables have been specified. 
-  All the variables in the table 
-  (the whole dataset) will be assigned to R!</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Assigning table data...</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb215"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb215-1"><a href="#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a>connections <span class="ot">&lt;-</span> <span class="fu">datashield.login</span>(<span class="at">logins =</span> logindata, <span class="at">assign =</span> <span class="cn">TRUE</span>, <span class="at">symbol =</span> <span class="st">"D"</span>)</span>
+<span id="cb143-2"><a href="#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$environment.searched
@@ -2779,14 +2436,10 @@ $study3$environment.searched
 $study3$objects.found
 [1] "D"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb217"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb217-1"><a href="#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datashield.logout</span>(connections)</span>
-<span id="cb217-2"><a href="#cb217-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb217-3"><a href="#cb217-3" aria-hidden="true" tabindex="-1"></a>connections <span class="ot">&lt;-</span> <span class="fu">datashield.login</span>(<span class="at">logins =</span> logindata, <span class="at">restore =</span> <span class="st">"workspace2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Logging into the collaborating servers</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb219"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb219-1"><a href="#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb145"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href="#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datashield.logout</span>(connections)</span>
+<span id="cb145-2"><a href="#cb145-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb145-3"><a href="#cb145-3" aria-hidden="true" tabindex="-1"></a>connections <span class="ot">&lt;-</span> <span class="fu">datashield.login</span>(<span class="at">logins =</span> logindata, <span class="at">restore =</span> <span class="st">"workspace2025"</span>)</span>
+<span id="cb145-4"><a href="#cb145-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ds.ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$study1
 $study1$environment.searched
