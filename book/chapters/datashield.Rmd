@@ -33,7 +33,7 @@ We are missing some of the necessary packages: "DSI", "DSOpal" and "dsBaseClient
 ```{r eval=FALSE}
 install.packages('DSI')
 install.packages('DSOpal')
-install.packages('dsBaseClient', repos='http://cran.obiba.org', type='source', dependencies=TRUE)
+install.packages('dsBaseClient', repos=c(getOption('repos'), 'http://cran.datashield.org'), dependencies=TRUE)
 install.packages('metafor')
 devtools::install_github('lifecycle-project/ds-helper')
 ```
