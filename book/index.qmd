@@ -43,14 +43,14 @@ You can find the slides used in the workshop in the following links:
 
 ## Schedule
 
-| Time          | Topic                                                                               |
-|---------------|-------------------------------------------------------------------------------------|
-| 09:00         | Welcome                                                                             |
-| 09:15 - 09:45 | Introduction to DataSHIELD and OPAL                                                 |
-| 09:45 - 11:00 | Workshop DataSHIELD data analysis + Exercise                                        |
-| 11:00 - 11:30 | Break                                                                               |
-| 11:30 - 12:00 | Introduction to OMOP and dsOMOP and extensions (dsHelper and dsOMOP.oracle)         |
-| 12:00 - 12:30 | Workshop dsOMOP cancer data analysis from OMOP database                             |
+| Time          | Topic                                          |
+|---------------|------------------------------------------------|
+| 09:00         | Welcome                                        |
+| 09:15 - 09:45 | Introduction to DataSHIELD and OPAL            |
+| 09:45 - 11:00 | Workshop DataSHIELD data analysis + exercise   |
+| 11:00 - 11:30 | Break                                          |
+| 11:30 - 12:00 | Introduction to OMOP and dsOMOP and extensions |
+| 12:00 - 12:30 | Workshop dsOMOP dataset creation + analysis    |
 
 ## Credits
 
