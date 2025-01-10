@@ -15,8 +15,6 @@ book:
     - index.qmd
     - chapters/datashield.Rmd
     - chapters/dsomop.Rmd
-  sidebar:
-    logo: logo.svg
 
 format:
   html:
