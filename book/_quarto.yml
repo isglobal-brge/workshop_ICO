@@ -20,7 +20,7 @@ format:
   html:
     theme: cosmo
     number-sections: false
-    css: ../docs/custom.css
+    css: custom.css
     execute:
       warning: false
       message: false
