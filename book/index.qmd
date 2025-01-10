@@ -41,6 +41,19 @@ You can find the slides used in the workshop in the following links:
 - [DataSHIELD slides](https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/main/slides/datashield_slides.pdf)
 - [dsOMOP slides](https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/main/slides/dsomop_slides.pdf)
 
+## Complementary materials
+
+- [DataSHIELD Beginner's Tutorial](https://data2knowledge.atlassian.net/wiki/spaces/DSDEV/pages/931069953/Beginners+Tutorial+DataSHIELD+v6.1)
+- [Resource bookdown: Examples of resources](https://isglobal-brge.github.io/resource_bookdown/resourcer.html#examples-of-resources)
+- [OHDSI Book chapter 'The Common Data Model'](https://ohdsi.github.io/TheBookOfOhdsi/CommonDataModel.html)
+- [OHDSI Book chapter 'Standardized Vocabularies'](https://ohdsi.github.io/TheBookOfOhdsi/StandardizedVocabularies.html)
+- [dsOMOP website](https://isglobal-brge.github.io/dsOMOP/)
+- [Using tidyverse within DataSHIELD](https://cran.r-project.org/web/packages/dsTidyverseClient/vignettes/dstidyverse.html)
+
+## Exercises solutions
+
+- [DataSHIELD exercises solutions](https://raw.githubusercontent.com/isglobal-brge/workshop_ICO/refs/heads/main/solutions/datashield_solutions.R)
+
 ## Schedule
 
 | Time          | Topic                                          |

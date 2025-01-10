@@ -4,13 +4,13 @@ library(dsBaseClient)
 # prepare login data and resources to assign
 builder <- DSI::newDSLoginBuilder()
 builder$append(server = "study1", url = "https://opal-demo.obiba.org", 
-               user = "dsuser", password = "password", 
+               user = "dsuser", password = "P@ssw0rd", 
                resource = "GWAS.ega_phenotypes_1", driver = "OpalDriver")
 builder$append(server = "study2", url = "https://opal-demo.obiba.org", 
-               user = "dsuser", password = "password", 
+               user = "dsuser", password = "P@ssw0rd", 
                resource = "GWAS.ega_phenotypes_2", driver = "OpalDriver")
 builder$append(server = "study3", url = "https://opal-demo.obiba.org", 
-               user = "dsuser", password = "password", 
+               user = "dsuser", password = "P@ssw0rd", 
                resource = "GWAS.ega_phenotypes_3", driver = "OpalDriver")
 logindata <- builder$build()
 
