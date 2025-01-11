@@ -149,11 +149,8 @@ These serve as concept catalogs for each table. We can explore them to identify 
 
 For example, as an exercise, let's find the concept IDs for: 
 
-- Chronic obstructive lung disease
-- Asthma
 - Systolic blood pressure
-- Heart rate
-- Tobacco user
+- Marital status
 
 **Note:** For convenience, we can save these concept catalogs as files for easy reference, sharing with collaborators, and future consultation. For example, we can save them as CSV files:
 

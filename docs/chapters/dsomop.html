@@ -1091,11 +1091,8 @@ $`opal-demo`$observation
 <p>These serve as concept catalogs for each table. We can explore them to identify the concepts that are present in the database.</p>
 <p>For example, as an exercise, let’s find the concept IDs for:</p>
 <ul>
-<li>Chronic obstructive lung disease</li>
-<li>Asthma</li>
 <li>Systolic blood pressure</li>
-<li>Heart rate</li>
-<li>Tobacco user</li>
+<li>Marital status</li>
 </ul>
 <p><strong>Note:</strong> For convenience, we can save these concept catalogs as files for easy reference, sharing with collaborators, and future consultation. For example, we can save them as CSV files:</p>
 <div class="cell">
@@ -1210,7 +1207,7 @@ $`opal-demo`$length
 
 $`opal-demo`$`quantiles &amp; mean`
       5%      10%      25%      50%      75%      90%      95%     Mean 
- 85.8500  91.7000 102.2500 113.0000 125.7500 143.2000 146.1500 114.7931 </code></pre>
+ 91.8500  97.5000 104.5000 113.5000 126.7500 138.3000 146.1500 115.8621 </code></pre>
 </div>
 </div>
 <p>Let’s now use the <code>renameVars</code> from the <code>dsHelper</code> package, which we have seen before, to rename the variable to <code>sbp</code> for convenience:</p>
@@ -1241,19 +1238,19 @@ $`opal-demo`$`quantiles &amp; mean`
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$breaks
- [1]  72.99226  81.48139  89.97053  98.45967 106.94880 115.43794 123.92707
- [8] 132.41621 140.90535 149.39448 157.88362
+ [1]  71.54436  81.37988  91.21540 101.05092 110.88644 120.72196 130.55748
+ [8] 140.39300 150.22852 160.06404 169.89956
 
 $counts
- [1]  0  0  5  8 15  9  7  3  6  0
+ [1]  0  0  9 13 14  9  5  4  0  0
 
 $density
- [1] 0.00000000 0.00000000 0.01015497 0.01624795 0.03046490 0.01827894
- [7] 0.01421695 0.00609298 0.01218596 0.00000000
+ [1] 0.000000000 0.000000000 0.015776737 0.022788620 0.024541591 0.015776737
+ [7] 0.008764854 0.007011883 0.000000000 0.000000000
 
 $mids
- [1]  77.23683  85.72596  94.21510 102.70423 111.19337 119.68251 128.17164
- [8] 136.66078 145.14991 153.63905
+ [1]  76.46212  86.29764  96.13316 105.96868 115.80420 125.63972 135.47524
+ [8] 145.31076 155.14628 164.98180
 
 $xname
 [1] "xvect"
